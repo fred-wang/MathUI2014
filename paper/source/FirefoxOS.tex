@@ -4,14 +4,10 @@
 
 Firefox OS is the open-source operating system targeting mobile devices being
 developed by Mozilla and based on Web technologies. All the apps in Firefox OS
-are Web pages running in Gecko and because of that all the technologies
-presented in the previous chapter can be used with the addition of some special
-API that currently are only available for Firefox OS due security issues, e.g.
-access to file system, and/or features not available at desktops.
-
-Scientific Web applications won't require the API only available at Firefox OS
-devices and because of it a Scientific Web Ecosystem built to Firefox OS can
-easily be available to others mobile devices and desktops.
+are Web pages and to create a app from a previous Web page you only need a manifest
+file that store some metadatas about the app and a figure to be the icon. The
+documents {\tt demos/app/manifest.webapp} and {\tt demos/app/icon.png} show how
+create a app for {\tt demos/app/index.html}.
 
 In the next section we give more details of what we call ``Math Suite'' and
 after that we present some of the demos wrote by Mozilla MathML community.
@@ -31,9 +27,22 @@ develop new applications in the same way as Basic Linear Algebra Subprograms
 languages and libraries.
 
 The authors of this work start writing this Javascript libraries
-and some demos that use it. At the moment we have a library to convert (La)TeX
-to MathML and another one to basic arithmetic manipulation.
+and some demos that use it.
 
 \section{Math Cheat Sheet}
 
-...
+This is the most basic app that someone can write since it
+is a collection of common K-12 equations available as a app.
+
+The equations are organized in sections and a table of contents is provided to
+help jumping from one section to another. Nice features that can be add in the
+future include:
+\begin{itemize}
+  \item link to resource like Wikipedia related to the equation,
+  \item search bar to quickly find the desired equation,
+  \item customization of equations, \ldots
+\end{itemize}
+
+\section{TeXZilla App}
+
+This is a note block app for math that take (La)TeX as input.
