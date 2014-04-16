@@ -1,0 +1,13 @@
+{
+    "name": "MathUI App Prototype",
+    "description": "Prototype for work submited to MathUI",
+    "launch_path": "/index.html",
+    "icons": {
+        "128": "/icon.png"
+    },
+    "developer": {
+        "name": "Raniere Silva and Frédéric Wang",
+        "url": "https://github.com/fred-wang/MathUI2014"
+    },
+    "default_locale": "en"
+}
