@@ -3,8 +3,10 @@
 \section{Overview}
 
 All the technologies presented in this chapter are based on Web standards and
-should be supported by any Web rendering engines. However, for scientific
-documents the best implementation is Gecko.
+should be supported by any Web rendering engines. We will particularly be
+interested in Gecko which has the best native MathML support and is the core
+of FirefoxOS. We will present some of the improvements that have been made
+by the Mozilla MathML team.
 
 All these technologies should be usable in HTML documents. This obviously
 includes Web pages but also EPUB ebooks, HTML mails, Browser add-ons, or
@@ -45,17 +47,80 @@ See {\tt demos/2-mathml-in-svg.svg} for an example of a SVG schema with
 MathML equations inside. LaTeXML 0.8 can generate
 such schemas from the LaTeX commands of the TikZ package.
 
-See also {\tt demos/3-mathml-javascript.html} for a small example of an
+{\tt demos/3-mathml-javascript.html} is a small example of an
 interactive MathML formula. Javascript is used to allow the user to highlight
 each term of a 3-dimensional determinant and understand each term of the
-Sarrus' rule. This is taken from the ``Mathematics in ebooks'' which contains
+Sarrus' rule. Note that no particular Javascript API is needed, you just
+modify the MathML tree via the standard DOM interface and the rendering
+is automatically updated.
+This example is taken from the ``Mathematics in ebooks'' which contains
 many other examples of this type.
+
+To conclude this review, we briefly mention classical Web features like
+Unicode characters, complex text layout (e.g. ligatures),
+right-to-left directionality, copy and paste, automatic line breaking and
+accessibility to users with disabilities.
+In general, these are well handled by Gecko. The two first
+works well in MathML too and right-to-left MathML has also been implemented in
+Gecko four years ago. For the fourth one, we have proposed a MathML Copy
+add-on for Firefox as a temporary solution. MathML line breaking is important
+for small screens but to our knowledge, no CSS-compatible implementations exist.
+Finally, MathML accessibility is not available in Gecko contrary to
+other Web systems. We expect to
+bring improvements to these three last points in order to get a complete Web
+platform for mathematical user interfaces.
 
 \section{Styling of Mathematics}
 
+As seen in previous examples, one can use CSS the standard way to apply
+specific styles to mathematical equations. However, perhaps the most important
+style that scientists and publishers want is the rendering with a given
+mathematical font. Gecko has always used TeX heuristics to position scripts,
+fractions, roots etc but these rules do not necessarily work well for other
+fonts than Knuth's Computer Modern. Moreover, in order to draw stretchy and
+large operators the MathML code requires to pick and assembly specific glyphs
+from math fonts. So far, Gecko only some Unicode constructions and had
+few private per-font tables to do that. This means that without the appropriate
+fonts installed, the quality of the MathML rendering could be very low.
 
+In order to solve that problem, we have started to implement Microsoft's
+OpenType MATH table, which is currently undergoing standardization at the
+MPEG group. We have started to use this table in order to provide a generic
+support for MATH fonts. In a nutshell, the main features are:
+
+\begin{enumerate}
+
+\item Some OpenType Tags to provide alternate form of glyphs. For example,
+  we implemented the "ssty" feature to adjust the size of glyphs like primes
+  when they are used as scripts.
+
+\item Font parameters to define precisely the gaps, shifts, kerning etc of
+  mathematical objects. Most of them are extensions to the TeX rules so it
+  is easy to integrate them in our MathML rendering engine.
+
+\item Font parameters specific to each glyph. At the moment, we only considered
+  italic corrections.
+
+\item A table to draw stretchy and large operators such as parenthesis,
+  radicals or summation symbols. We have started to use that table for our
+  operator stretching code.
+
+\end{enumerate}
+
+There are various mathematical fonts with an OpenType MATH table available and
+most of them are distributed with a TeXLive distribution. Windows and Mac
+systems have respectively Cambria Math and STIX available. We have also
+experimented with PackageKit auto-installation on Linux. This means that
+missing appropriate fonts will become very unlikely on Desktop. We also have
+plans to make these fonts preinstalled on FirefoxOS. In any case, fallback
+downloadable Web fonts can also be used.
+
+The page {\tt demos/4-mathml-fonts.html} shows how to get various font style for
+a document. At the moment, it will not work correctly without a Nightly
+version of Gecko and some additional patches.
 
 \section{Canvas and WebGL}
+
 
 
 \section{Web Components}
