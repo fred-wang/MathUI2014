@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title>MathML in HTML</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+      @font-face {
+        font-family: 'Neo Euler';
+        src: local('Neo-Euler-Regular'), local('Neo Euler Regular'),
+             url('webfonts/euler.woff');
+      }
+      body {
+        font-family: 'Neo Euler';
+        font-size: 16pt;
+        color: white;
+        background: #030;
+      }
+      math {
+        font-family: 'Neo Euler';
+      }
+      table {
+        font-size: 64pt;
+        width: 100%;
+      }
+      table, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>MathML in HTML</h1>
+
+    <p>This page demonstrates that MathML integrates well inside HTML page.
+      It can easily be styled like the text
+      (font-family: Neo Euler, font-size: 64pt, color: white), scales according
+      to the font-size and has good vertical alignment with respect to the
+      surrounding text.
+    </p>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>PNG</td>
+          <td>blah <img src="ex21.png" alt="ex21" width="180"/> blah</td>
+        </tr>
+        <tr>
+          <td>MathML</td>
+          <td>blah
+            <math>
+              <mrow>
+                <mfrac>
+                  <mrow>
+                    <mi>x</mi>
+                    <mo>+</mo>
+                    <msup>
+                      <mi>y</mi>
+                      <mn>2</mn>
+                    </msup>
+                  </mrow>
+                  <mrow>
+                    <mi>k</mi>
+                    <mo>+</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+              </mrow>
+            </math>
+            blah</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </body>
+</html>

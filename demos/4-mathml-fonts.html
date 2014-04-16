@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+  <head>
+    <title>OpenType MATH Fonts</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+      select {
+        color: red;
+        background: transparent;
+      }
+
+      /* Asana Math */
+      @font-face {
+        font-family: 'Asana Math';
+        src: local('Asana-Math-Regular'), local('Asana Math Regular'),
+             url('webfonts/Asana-Math.woff');
+      }
+      body.Asana, body.Asana mtext, body.Asana select,
+      body.Asana math {
+        font-family: 'Asana Math';
+      }
+
+      /* TeXGyreBonum */
+      @font-face {
+        font-family: 'TeX Gyre Bonum';
+        src: local('TeX-Gyre-Bonum-Regular'),
+             local('TeX Gyre Bonum Regular'),
+             url('webfonts/texgyrebonum-regular.woff');
+      }
+      @font-face {
+        font-family: 'TeX Gyre Bonum Math';
+        src: local('TeX-Gyre-Bonum-Math-Regular'),
+             local('TeX Gyre Bonum Math Regular'),
+             url('webfonts/texgyrebonum-math.woff');
+      }
+      body.TeXGyreBonum, body.TeXGyreBonum mtext, body.TeXGyreBonum select {
+        font-family: 'TeX Gyre Bonum';
+      }
+      .TeXGyreBonum math {
+        font-family: 'TeX Gyre Bonum Math';
+      }
+
+      /* TeXGyrePagella */
+      @font-face {
+        font-family: 'TeX Gyre Pagella';
+        src: local('TeX-Gyre-Pagella-Regular'),
+             local('TeX Gyre Pagella Regular'),
+             url('webfonts/texgyrepagella-regular.woff');
+      }
+      @font-face {
+        font-family: 'TeX Gyre Pagella Math';
+        src: local('TeX-Gyre-Pagella-Math-Regular'),
+             local('TeX Gyre Pagella Math Regular'),
+             url('webfonts/texgyrepagella-math.woff');
+      }
+      body.TeXGyrePagella, body.TeXGyrePagella mtext,
+      body.TeXGyrePagella select {
+        font-family: 'TeX Gyre Pagella';
+      }
+      .TeXGyrePagella math {
+        font-family: 'TeX Gyre Pagella Math';
+      }
+
+      /* TeXGyreTermes */
+      @font-face {
+        font-family: 'TeX Gyre Termes';
+        src: local('TeX-Gyre-Termes-Regular'),
+             local('TeX Gyre Termes Regular'),
+             url('webfonts/texgyretermes-regular.woff');
+      }
+      @font-face {
+        font-family: 'TeX Gyre Termes Math';
+        src: local('TeX-Gyre-Termes-Math-Regular'),
+             local('TeX Gyre Termes Math Regular'),
+             url('webfonts/texgyretermes-math.woff');
+      }
+      body.TeXGyreTermes, body.TeXGyreTermes mtext, body.TeXGyreTermes select {
+        font-family: 'TeX Gyre Termes';
+      }
+      .TeXGyreTermes math {
+        font-family: 'TeX Gyre Termes Math';
+      }
+
+      /* LatinModern */
+      @font-face {
+        font-family: 'Latin Modern';
+        src: local('Latin-Modern-Regular'),
+             local('Latin Modern Regular'),
+             url('webfonts/lmroman12-regular.woff');
+      }
+      @font-face {
+        font-family: 'Latin Modern Math';
+        src: local('Latin-Modern-Math-Regular'),
+             local('Latin Modern Math Regular'),
+             url('webfonts/latinmodern-math.woff');
+      }
+      body.LatinModern, body.LatinModern mtext, body.LatinModern select {
+        font-family: 'Latin Modern';
+      }
+      body.LatinModern math {
+        font-family: 'Latin Modern Math';
+      }
+
+      /* NeoEuler */
+      @font-face {
+        font-family: 'Neo Euler';
+        src: local('Neo-Euler-Regular'), local('Neo Euler Regular'),
+             url('webfonts/euler.woff');
+      }
+      body.NeoEuler, body.NeoEuler mtext, body.NeoEuler select,
+      body.NeoEuler math {
+        font-family: 'Neo Euler';
+      }
+
+      /* STIXWord */
+      @font-face {
+        font-family: 'STIX Math';
+        src: local('STIX-Math-Regular'), local('STIX Math Regular'),
+             url('webfonts/STIXMath-Regular.woff');
+      }
+      body.STIXWord, body.STIXWord mtext, body.STIXWord select,
+      body.STIXWord math {
+        font-family: 'STIX Math';
+      }
+    </style>
+    <script type="text/javascript">
+      function updateMathFont()
+      {
+        var mathFont = document.getElementById("MathFont").value;
+        document.body.setAttribute("class", mathFont);
+      }
+      
+      function load()
+      {
+        document.getElementById("MathFont").
+          addEventListener("change", updateMathFont, false)
+        updateMathFont();
+      }
+
+      window.addEventListener("load", load, false);
+    </script>
+  </head>
+  <body>
+
+    <h1>OpenType MATH Fonts</h1>
+
+    <p>This page demonstrates the support for OpenType MATH fonts currently
+      being implemented in Gecko. Use the following form to select the
+      font-family to use for the page:</p>
+
+    <p style="text-align: center;">
+      <select name="MathFont" id="MathFont">
+        <option value="Asana">Asana</option>
+        <option value="TeXGyreBonum">TeX Gyre Bonum</option>
+        <option value="TeXGyrePagella">TeX Gyre Pagella</option>
+        <option value="TeXGyreTermes">TeX Gyre Termes</option>
+        <option value="LatinModern">Latin Modern</option>
+        <option value="NeoEuler">Neo Euler</option>
+        <option value="STIXWord">STIX Word</option>
+      </select>
+    </p>
+
+    <p>We note that <math xmlns="http://www.w3.org/1998/Math/MathML" id="SSx3.p5.m1" class="ltx_Math" alttext="x\mapsto\Im(f(x))" display="inline"><mrow><mi>x</mi><mo>↦</mo><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math> is the integrand above. We also note that the
+    poles of <math xmlns="http://www.w3.org/1998/Math/MathML" id="SSx3.p5.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> are <math xmlns="http://www.w3.org/1998/Math/MathML" id="SSx3.p5.m3" class="ltx_Math" alttext="z^{\pm}=-1\pm 2i" display="inline"><mrow><msup><mi>z</mi><mo>±</mo></msup><mo>=</mo><mrow><mo>-</mo><mn>1</mn><mo>±</mo><mrow><mn>2</mn><mo>⁢</mo><mi>i</mi></mrow></mrow></mrow></math>. By choosing the right contour, one can show that
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" id="Ch0.Ex90.m1" class="ltx_Math" alttext="\int_{-\infty}^{+\infty}f(x)dx=-2i\pi\sum_{\stackrel{z\text{residue}}{\Im(z)&lt;0%
+                                                                                            }}\mathrm{Res}(f,z)" display="block"><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></msubsup><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mover><mrow><mrow><mi mathvariant="normal">ℑ</mi><mo movablelimits="false">⁡</mo><mrow><mo movablelimits="false">(</mo><mi>z</mi><mo movablelimits="false">)</mo></mrow></mrow><mo movablelimits="false">&lt;</mo><mn>0</mn></mrow><mrow><mi>z</mi><mo>⁢</mo><mtext>residue</mtext></mrow></mover></munder><mrow><mi>Res</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>f</mi><mo>,</mo><mi>z</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow></mrow></math>
+
+and thus
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" id="Ch0.Ex93.m1" class="ltx_Math" alttext="\int_{-\infty}^{+\infty}\frac{16\sin(2x+\pi)}{5(x^{2}+2x+5)^{2}}dx=\frac{\pi%
+                                                                                            \sin(2)}{e^{4}}" display="block"><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></msubsup><mrow><mfrac><mrow><mn>16</mn><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>π</mi></mrow><mo>)</mo></mrow></mrow></mrow><mrow><mn>5</mn><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>5</mn></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mfrac><mrow><mi>π</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></mrow></mrow><msup><mi>e</mi><mn>4</mn></msup></mfrac></mrow></math></p>
+
+</body>
+</html>

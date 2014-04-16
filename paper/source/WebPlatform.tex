@@ -2,11 +2,64 @@
 
 \section{Overview}
 
-Web pages, HTML mails, Browser add-ons, EPUB ebooks, FirefoxOS Web apps
+All the technologies presented in this chapter are based on Web standards and
+should be supported by any Web rendering engines. However, for scientific
+documents the best implementation is Gecko.
+
+All these technologies should be usable in HTML documents. This obviously
+includes Web pages but also EPUB ebooks, HTML mails, Browser add-ons, or
+FirefoxOS Web apps. For example, it is possible to receive and send emails
+with mathematical equations using Thunderbird or Seamonkey's mail client.
+In this paper, we will mainly
+focus on FirefoxOS Web apps but keep in mind that all the features apply in
+other context too.
 
 \section{Basic HTML5 Features}
 
+The main language is HTML5, which allows to create pages with headers,
+paragraphs, tables, hyperlinks etc The well-known CSS language is used to
+apply specific style to HTML5 and is powerful enough to produce advanced
+designs. Finally, DOM/Javascript provides a programming language and enables
+interactive documents and complex user interface. New HTML5 elements
+gives other possibilities . For example the document
+{\tt pendulum-20131125} of the ``Mathematics in ebooks'' project uses the
+the {\tt <video>} tag to insert some sequences of a physics lecture.
+
+For scientific documents, we need two other features: creating graphs, schemas,
+diagrams etc and writing mathematical formulas. For the former, simple PNG
+images might be enough. However, Web rendering engines also support the SVG
+language to let authors write scalable images using some simple drawing
+primitive. Many programs are available to generate scientific schemas in SVG
+formats. Mathematical equations can be viewed as an extension of text layout
+and thus requires a good integration within HTML as done by
+Gecko's native MathML. The document {\tt demos/1-mathml-in-html.html} shows how
+various font properties apply to MathML text via CSS, the good alignment
+of inline equations and its the scalability.
+
+One of the nice feature introduced some years ago in Gecko is the possibility
+to integrate MathML equation inside SVG images via the {\tt <foreignObject>}
+element. People can then create
+scientific schemas with mathematical equations.
+We will also use this property later when we introduce {\tt <canvas>}.
+See {\tt demos/2-mathml-in-svg.svg} for an example of a SVG schema with
+MathML equations inside. LaTeXML 0.8 can generate
+such schemas from the LaTeX commands of the TikZ package.
+
+See also {\tt demos/3-mathml-javascript.html} for a small example of an
+interactive MathML formula. Javascript is used to allow the user to highlight
+each term of a 3-dimensional determinant and understand each term of the
+Sarrus' rule. This is taken from the ``Mathematics in ebooks'' which contains
+many other examples of this type.
+
+\section{Styling of Mathematics}
 
 
-\section{Advanced HTML5 Features}
+
+\section{Canvas and WebGL}
+
+
+\section{Web Components}
+
+
+\section{TeXZilla}
 

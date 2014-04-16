@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+  <head>
+    <title>MathML and Javascript</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript">
+      function getEl(id)
+      {
+        return document.getElementById(id);
+      }
+
+      function highlight(element)
+      {
+        element.setAttribute("mathcolor", "red");
+      }
+
+      function unhighlight(element)
+      {
+        element.removeAttribute("mathcolor");
+      }
+
+      var sarrusStep = 2;
+      function sarrus()
+      {
+        var sarrusTable = [
+          ["a11", "a22", "a33"],
+          ["a12", "a23", "a31"],
+          ["a13", "a21", "a32"],
+          ["a31", "a22", "a13"],
+          ["a32", "a23", "a11"],
+          ["a33", "a21", "a12"]
+        ];
+
+        var x = sarrusTable[sarrusStep];
+        unhighlight(getEl(x[0]));
+        unhighlight(getEl(x[1]));
+        unhighlight(getEl(x[2]));
+        unhighlight(getEl(x[0]+x[1]+x[2]));
+        sarrusStep = (sarrusStep+1)%6;
+        x = sarrusTable[sarrusStep];
+        highlight(getEl(x[0]));
+        highlight(getEl(x[1]));
+        highlight(getEl(x[2]));
+        highlight(getEl(x[0]+x[1]+x[2]));
+      }
+    </script>
+  </head>
+  <body>
+
+    <h1>MathML and Javascript</h1>
+
+    <p>This page shows how Javascript can be used to produce interactive.
+      Clicking on the button will highlight the terms of Sarrus' rule:
+      <input type="button" value="Next Term" onclick="sarrus()"/>.</p>
+
+
+    <p><math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+        <mi>det</mi>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mtable rowspacing="0.5ex">
+              <mtr>
+                <mtd>
+                  <msub id="a11">
+                    <mi>a</mi>
+                    <mrow>
+                      <mn>1</mn>
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <msub id="a12">
+                    <mi>a</mi>
+                    <mrow>
+                      <mn>1</mn>
+                      <mn>2</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <msub mathcolor="red" id="a13">
+                    <mi>a</mi>
+                    <mrow>
+                      <mn>1</mn>
+                      <mn>3</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <msub mathcolor="red" id="a21">
+                    <mi>a</mi>
+                    <mrow>
+                      <mn>2</mn>
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <msub id="a22">
+                    <mi>a</mi>
+                    <mrow>
+                      <mn>2</mn>
+                      <mn>2</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <msub id="a23">
+                    <mi>a</mi>
+                    <mrow>
+                      <mn>2</mn>
+                      <mn>3</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <msub id="a31">
+                    <mi>a</mi>
+                    <mrow>
+                      <mn>3</mn>
+                      <mn>1</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <msub mathcolor="red" id="a32">
+                    <mi>a</mi>
+                    <mrow>
+                      <mn>3</mn>
+                      <mn>2</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+                <mtd>
+                  <msub id="a33">
+                    <mi>a</mi>
+                    <mrow>
+                      <mn>3</mn>
+                      <mn>3</mn>
+                    </mrow>
+                  </msub>
+                </mtd>
+              </mtr>
+            </mtable>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mrow id="a11a22a33">
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>1</mn>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>2</mn>
+
+              <mn>2</mn>
+
+            </mrow>
+          </msub>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>3</mn>
+              <mn>3</mn>
+            </mrow>
+          </msub>
+        </mrow>
+        <mo>+</mo>
+        <mrow id="a12a23a31">
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>1</mn>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>2</mn>
+              <mn>3</mn>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>3</mn>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mrow>
+        <mo>+</mo>
+        <mrow mathcolor="red" id="a13a21a32">
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>1</mn>
+              <mn>3</mn>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>2</mn>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>3</mn>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+        </mrow>
+        <mo>-</mo>
+        <mrow id="a31a22a13">
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>3</mn>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>2</mn>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>1</mn>
+              <mn>3</mn>
+            </mrow>
+          </msub>
+        </mrow>
+        <mo>-</mo>
+        <mrow id="a32a23a11">
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>3</mn>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>2</mn>
+              <mn>3</mn>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>1</mn>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+        </mrow>
+        <mo>-</mo>
+        <mrow id="a33a21a12">
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>3</mn>
+              <mn>3</mn>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>2</mn>
+              <mn>1</mn>
+            </mrow>
+          </msub>
+          <msub>
+            <mi>a</mi>
+            <mrow>
+              <mn>1</mn>
+              <mn>2</mn>
+            </mrow>
+          </msub>
+        </mrow>
+      </math>
+    </p>
+
+  </body>
+</html>
