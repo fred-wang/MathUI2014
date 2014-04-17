@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Canvas RLC</title>
+    <meta charset="utf-8"/>
+  </head>
+  <body onload="update()">
+
+<math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math>: <span id="frequency2">67</span> Hz <input type="range" id="frequency" min="20" max="200" value="20" step="1" onchange="update()"/> ;
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>V</mi> <mn>0</mn></msub></mrow><annotation encoding="application/x-tex">V_0</annotation></semantics></math>: 1.7 V ; <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>I</mi> <mn>0</mn></msub></mrow><annotation encoding="application/x-tex">I_0</annotation></semantics></math>: <span id="current">0.07694916789271647</span> A ;
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><msub><mi>V</mi> <mn>0</mn></msub><mo stretchy="false">/</mo><msub><mi>I</mi> <mn>0</mn></msub></mrow><annotation encoding="application/x-tex">V_0 / I_0</annotation></semantics></math>: <span id="impedance">22.09250660605144</span> Ω ;
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="inline"><semantics><mrow><mfrac><mrow><msub><mi>V</mi> <mn>0</mn></msub><msub><mi>I</mi> <mn>0</mn></msub></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{V_0 I_0}{2}</annotation></semantics></math>: <span id="power">0.065406792708809</span> W
+</p>
+
+<canvas id="waveform" width="500" height="500" style="border: 1px solid black;">
+  Canvas Not Supported
+</canvas>  
+
+<canvas id="phaseform" width="500" height="500" style="border: 1px solid black;">
+  Canvas Not Supported
+</canvas>  
+
+<script type="text/javascript">
+
+var R = 9; // unknown resistance between 5Ω or 10Ω
+var L = 8.5 / 1000; // 8.5 mH
+var C = 100 / 1000000; // 100 μF
+var V0 = 1.7 // 1.7 V
+
+function drawGrid(ctx, x0, xN, y0, yN, N, axisColor)
+{
+  ctx.save();
+  ctx.beginPath();
+  var xH = (xN - x0) / N;
+  for (var i = 1; i < N; i++) {
+    var x = x0 + xH * i;
+    ctx.moveTo(x, y0);
+    ctx.lineTo(x, yN);
+  }
+  var yH = (yN - y0) / N;
+  for (var i = 1; i < N; i++) {
+    var y = y0 + yH * i;
+    ctx.moveTo(x0, y);
+    ctx.lineTo(xN, y);
+  }
+  ctx.stroke();
+  ctx.restore();
+
+  ctx.save();
+  ctx.strokeStyle = axisColor;
+  ctx.beginPath();
+  ctx.moveTo((xN + x0) / 2, y0);
+  ctx.lineTo((xN + x0) / 2, yN);
+  ctx.moveTo(x0, (yN + y0) / 2);
+  ctx.lineTo(xN, (yN + y0) / 2);
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawSin(ctx, A, phi, f, x0, xN, xUnit, yUnit, color)
+{
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.beginPath();
+  for (var x = x0; x <= xN; x++) {
+    var t = x / xUnit;
+    var sint = A * Math.sin(t * 2 * Math.PI * f + phi);
+      ctx.lineTo(x, sint * yUnit);
+  }
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawEllipse(ctx, I0, phi, V0, f, N, xUnit, yUnit, color)
+{
+  ctx.save();
+  ctx.strokeStyle = color;
+  ctx.beginPath();
+  var h = (1/f)/N;
+  for (var i = 0; i <= N; i++) {
+    var t = i * h;
+    var sintI = I0 * Math.sin(t * 2 * Math.PI * f - phi);
+    var sintV = V0 * Math.sin(t * 2 * Math.PI * f);
+      ctx.lineTo(sintI * xUnit, sintV * yUnit);
+  }
+  ctx.stroke();
+  ctx.restore();
+}
+
+function update()
+{
+  // Init parameters
+  var f = parseInt(document.getElementById("frequency").value);
+  var omega = 2 * Math.PI * f;
+  var k = omega * L - 1 / (omega * C);
+  var phi = Math.atan(k / R);
+  var I0 = V0 / Math.sqrt(R*R + k*k);
+
+  document.getElementById("frequency2").innerHTML = f;
+  document.getElementById("current").innerHTML = I0;
+  document.getElementById("impedance").innerHTML = V0 / I0;
+  document.getElementById("power").innerHTML = V0 * I0 / 2;
+
+  // Wave form
+  var canvas = document.getElementById("waveform"); 
+  var w = canvas.width;
+  var h = canvas.height;
+  var ndiv = 10;
+  var TimeUnit = (w / ndiv) / .001; // 1 ms per div
+  var VoltageUnit = (h / ndiv) / .5; // .5 V per div
+  var CurrentUnit = (h / ndiv) / .1; // .1 A per div
+
+  var ctx = canvas.getContext("2d");
+  ctx.save();
+  ctx.translate(w/2, h/2);
+  ctx.clearRect(-w/2, -h/2, w, h);
+  drawGrid(ctx, -w/2, w/2, -h/2, h/2, ndiv, "blue");
+
+  ctx.fillText("Time (1ms/div)", 150, 0);
+
+  ctx.save();
+  ctx.fillStyle = "red";
+  ctx.fillText("Output Voltage (0.5V/div)", 0, -200);
+  ctx.restore();
+
+  ctx.save();
+  ctx.fillStyle = "green";
+  ctx.fillText("Output Current (0.1A/div)", 0, -220);
+  ctx.restore();
+
+  ctx.save();
+  ctx.scale(1,-1)
+  drawSin(ctx, V0, 0, f, -w/2, w/2, TimeUnit, VoltageUnit, "red");
+  drawSin(ctx, I0, -phi, f, -w/2, w/2, TimeUnit, CurrentUnit, "green");
+  ctx.restore();
+
+  ctx.restore();
+
+  // Phase form
+  canvas = document.getElementById("phaseform"); 
+  w = canvas.width;
+  h = canvas.height;
+  ndiv = 10;
+  VoltageUnit = (h / ndiv) / .5; // .5 V per div
+  CurrentUnit = (h / ndiv) / .05; // .05 A per div
+
+  ctx = canvas.getContext("2d");
+  ctx.save();
+  ctx.translate(w/2, h/2);
+  ctx.clearRect(-w/2, -h/2, w, h);
+  drawGrid(ctx, -w/2, w/2, -h/2, h/2, ndiv, "blue");
+
+  ctx.save();
+  ctx.fillStyle = "red";
+  ctx.fillText("Output Voltage (0.5V/div)", 0, -200);
+  ctx.restore();
+
+  ctx.save();
+  ctx.fillStyle = "green";
+  ctx.fillText("Output Current (0.1A/div)", 100, 0);
+  ctx.restore();
+
+  ctx.save();
+  ctx.scale(1,-1)
+  drawEllipse(ctx, I0, phi, V0, f, 500, CurrentUnit, VoltageUnit, "red")
+  ctx.restore();
+
+  ctx.restore();
+}
+
+</script>
+
+  </body>
+</html>

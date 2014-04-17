@@ -156,6 +156,21 @@ Mozilla applications.
 
 \section{Canvas and WebGL}
 
+The {\tt <canvas>} element has been introduced in HTML5 to draw graphics via
+JavaScript. This element may be more convenient than SVG in situations where
+you want to generate schemas dynamically. For example {\tt demos/5-canvas.html}
+shows the typical graphs associated to a RLC circuit that are automatically
+updated when the user changes the frequency of the current. It is also possible
+to use WebGL, opening the possibility to draw 3D scientific schemas. For example
+chemdoodle relies on WebGL to provide 3D representation of chemical structures.
+
+As for SVG, 2D/3D scientific schemas created via the {\tt <canvas>} might
+require mathematical formulas. This is possible since we saw that MathML can be
+inserted in SVG via a {\tt <foreignObject>} and moreover SVG images can be
+inserted in both the CanvasRenderingContext2D and WebGLRenderingContext. One
+can for example use TeXZilla's {\tt toImage} function to generate such SVG
+images dynamically. The page {\tt demos/6-mathml-in-webgl.html} shows an
+example of a 3D schemas with mathematical formulas inside.
 
 \section{Web Components}
 
