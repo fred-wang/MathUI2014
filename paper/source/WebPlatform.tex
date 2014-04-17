@@ -119,12 +119,43 @@ The page {\tt demos/4-mathml-fonts.html} shows how to get various font style for
 a document. At the moment, it will not work correctly without a Nightly
 version of Gecko and some additional patches.
 
+\section{TeXZilla}
+
+Mathematical formulas are complex and hence writing mathematics is difficult.
+Some tools like WYSIWYG editors or handwriting recognition might help. One
+input method easy to implement is the conversion from a simple syntax like
+LaTeX into MathML. Even if there are tons of such converters, only a few of
+them are implemented in Javascript. The remaining ones try to tweak the output
+to workaround browser limitations, are not standalone Javascript module usable
+in add-ons and do work with Unicode characters or right-to-left
+mathematics. Hence we decided to write yet another converters to focus on
+Mozilla's needs.
+
+We thus wrote TeXZilla, a LaTeX-to-MathML converter generated with the help of
+Jison and relies on a LALR(1) grammar and on the unicode.xml file of
+the XML Entity Definitions for Characters specification. It accepts arbitrary
+Unicode input as well as right-to-left mathematics, something that is important
+for the world-wide aspect of the Mozilla community and more specifically
+Arabic mathematics.
+
+The public API contains a {\tt toMathML} function to convert a LaTeX string
+into a MathML DOM but also a {\tt toMathMLString} function when the DOM is
+not available (e.g. in nodejs). There is also a convenient {\tt getTeXSource}
+function to extract the LaTeX source from the MathML output and a
+{\tt toImage} function to embed the MathML output in a SVG image (see the next
+section).
+
+TeXZilla can work in any CommonJS program, in Web page, as a command line
+program or as a Web server. We have submitted a Firefox add-on
+that has been approved by the reviewers. We have also already integrated it in
+various other Mozilla tools: in CKEditor for the Mozilla Developer Network,
+in the Seamonkey/Thunderbird composers or in a Firefox OS webapp (see next
+chapter). Finally, a prototype {\tt <x-tex>} custom element is also available
+(see Web Components). We expect it will become an important library for future
+Mozilla applications.
+
 \section{Canvas and WebGL}
 
 
-
 \section{Web Components}
-
-
-\section{TeXZilla}
 
