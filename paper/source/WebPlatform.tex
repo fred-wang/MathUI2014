@@ -34,7 +34,7 @@ language to let authors write scalable images using some simple drawing
 primitive. Many programs are available to generate scientific schemas in SVG
 formats. Mathematical equations can be viewed as an extension of text layout
 and thus requires a good integration within HTML as done by
-Gecko's native MathML. The document {\tt demos/1-mathml-in-html.html} shows how
+Gecko's native MathML. The document \href{http://fred-wang.github.io/MathUI2014/demos/1-mathml-in-html.html}{demos/1-mathml-in-html.html} shows how
 various font properties apply to MathML text via CSS, the good alignment
 of inline equations and its the scalability.
 
@@ -43,11 +43,11 @@ to integrate MathML equation inside SVG images via the {\tt <foreignObject>}
 element. People can then create
 scientific schemas with mathematical equations.
 We will also use this property later when we introduce {\tt <canvas>}.
-See {\tt demos/2-mathml-in-svg.svg} for an example of a SVG schema with
+See \href{http://fred-wang.github.io/MathUI2014/demos/2-mathml-in-svg.svg}{demos/2-mathml-in-svg.svg} for an example of a SVG schema with
 MathML equations inside. LaTeXML 0.8 can generate
 such schemas from the LaTeX commands of the TikZ package.
 
-{\tt demos/3-mathml-javascript.html} is a small example of an
+\href{http://fred-wang.github.io/MathUI2014/demos/3-mathml-javascript.html}{demos/3-mathml-javascript.html} is a small example of an
 interactive MathML formula. Javascript is used to allow the user to highlight
 each term of a 3-dimensional determinant and understand each term of the
 Sarrus' rule. Note that no particular Javascript API is needed, you just
@@ -115,7 +115,7 @@ missing appropriate fonts will become very unlikely on Desktop. We also have
 plans to make these fonts preinstalled on FirefoxOS. In any case, fallback
 downloadable Web fonts can also be used.
 
-The page {\tt demos/4-mathml-fonts.html} shows how to get various font style for
+The page \href{http://fred-wang.github.io/MathUI2014/demos/4-mathml-fonts.html}{demos/4-mathml-fonts.html} shows how to get various font style for
 a document. At the moment, it will not work correctly without a Nightly
 version of Gecko and some additional patches.
 
@@ -158,7 +158,7 @@ Mozilla applications.
 
 The {\tt <canvas>} element has been introduced in HTML5 to draw graphics via
 JavaScript. This element may be more convenient than SVG in situations where
-you want to generate schemas dynamically. For example {\tt demos/5-canvas.html}
+you want to generate schemas dynamically. For example \href{http://fred-wang.github.io/MathUI2014/demos/5-canvas.html}{demos/5-canvas.html}
 shows the typical graphs associated to a RLC circuit that are automatically
 updated when the user changes the frequency of the current. It is also possible
 to use WebGL, opening the possibility to draw 3D scientific schemas. For example
@@ -169,7 +169,7 @@ require mathematical formulas. This is possible since we saw that MathML can be
 inserted in SVG via a {\tt <foreignObject>} and moreover SVG images can be
 inserted in both the CanvasRenderingContext2D and WebGLRenderingContext. One
 can for example use TeXZilla's {\tt toImage} function to generate such SVG
-images dynamically. The page {\tt demos/6-mathml-in-webgl.html} shows an
+images dynamically. The page \href{http://fred-wang.github.io/MathUI2014/demos/6-mathml-in-webgl.html}{demos/6-mathml-in-webgl.html} shows an
 example of a 3D schemas with mathematical formulas inside.
 
 \section{Web Components}
@@ -186,12 +186,12 @@ X-Tag allows to emulate their behavior.
 
 Web components can obviously be very helpful to design user inteface for
 sciencific Web app. For example, the specific interactive drawing of
-{\tt 5-canvas.html} for RLC circuits could be become a generic widget 
+\href{http://fred-wang.github.io/MathUI2014/demos/5-canvas.html}{demos/5-canvas.html} for RLC circuits could be become a generic widget 
 {\tt <x-graph>} to draw scientific graphs with with some user interface to
 configure the curve parameters. As a proof-of-concept, we have used the X-Tag
 library to create a custom {\tt <x-tex>} tag. The behavior is simple: it
 automatically converts its LaTeX content into MathML using TeXZilla, see
-{\tt 7-web-component.html}.
+\href{http://fred-wang.github.io/MathUI2014/demos/7-web-component.html}{demos/7-web-component.html}.
 The Mozilla MathML team is following the developments in Web components and
 plans to create more custom elements for sciencific web apps, so that Web
 developers can reuse them.
