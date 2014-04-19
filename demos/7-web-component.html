@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>x-tex Web Component</title>
+    <meta charset="utf-8"/> 
+    <link rel="stylesheet" type="text/css" href="http://fred-wang.github.io/x-tex/demo/x-tag-components.css"/>
+    <link rel="stylesheet" type="text/css" href="http://fred-wang.github.io/x-tex/src/tex.css"/>
+    <script type="text/javascript" src="http://fred-wang.github.io/x-tex/demo/x-tag-components.js"></script> 
+    <script type="text/javascript" src="http://fred-wang.github.io/x-tex/src/tex.js"></script>
+  </head>
+  <body>
+
+    <h1>x-tex Web Component</h1>
+
+    <p>This page contains the following code:</p>
+
+<pre style="color: blue;">
+  &lt;x-tex display="block"&gt;\Gamma(t) =
+    \lim_{n \to \infty} \frac{n! \; n^t}{t \; (t+1)\cdots(t+n)} =
+    \frac{1}{t} \prod_{n=1}^\infty \frac{\left(1+\frac{1}{n}\right)^t}{1+\frac{t}{n}} =
+    \frac{e^{-\gamma t}}{t} \prod_{n=1}^\infty \left(1 + \frac{t}{n}\right)^{-1} e^{\frac{t}{n}}
+  &lt;/x-tex&gt;
+</pre>
+
+    <p>which is automatically converted into MathML:</p>
+
+<x-tex display="block">\Gamma(t) = \lim_{n \to \infty} \frac{n! \; n^t}{t \; (t+1)\cdots(t+n)}= \frac{1}{t} \prod_{n=1}^\infty \frac{\left(1+\frac{1}{n}\right)^t}{1+\frac{t}{n}} = \frac{e^{-\gamma t}}{t} \prod_{n=1}^\infty \left(1 + \frac{t}{n}\right)^{-1} e^{\frac{t}{n}}</x-tex>
+
+  </body>
+</html>
