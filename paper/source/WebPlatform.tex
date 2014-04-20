@@ -44,7 +44,7 @@ One of the nice feature introduced some years ago in Gecko is the possibility
 to integrate MathML equations inside SVG images via the {\tt <foreignObject>}
 element. People can then create
 scientific schemas with mathematical equations.
-We will also use this property in section~\ref{sec:canvas}
+We will also use this property in section~\ref{sec:advanced}
 when we introduce {\tt <canvas>}.
 See \href{http://fred-wang.github.io/MathUI2014/demos/2-mathml-in-svg.svg}{demos/2-mathml-in-svg.svg} for an example of a SVG schema with
 MathML equations inside. Again, some authoring tools exist to help generating
@@ -162,7 +162,7 @@ into a MathML DOM but also a {\tt toMathMLString} function when the DOM is
 not available (e.g. in nodejs). There is also a convenient {\tt getTeXSource}
 function to extract the LaTeX source from the MathML output and a
 {\tt toImage} function to embed the MathML output inside a SVG image
-(see section~\ref{sec:canvas}).
+(see section~\ref{sec:advanced}).
 
 TeXZilla can work in any CommonJS program, in Web page, as a command line
 program or as a Web server. We have submitted a Firefox add-on
@@ -171,11 +171,11 @@ various other Mozilla tools: in CKEditor for the Mozilla Developer Network,
 in the Seamonkey/Thunderbird composers or in a Firefox OS webapp
 (see section~\ref{sec:firefoxOS}).
 Finally, a prototype {\tt <x-tex>} custom element is also available
-(see section~\ref{sec:webcomponents}).
+(see section~\ref{sec:advanced}).
 We expect it will become an important library for future Mozilla applications.
 
-\subsection{Canvas and WebGL}
-\label{sec:canvas}
+\subsection{Advanced HTML5 Features}
+\label{sec:advanced}
 
 The {\tt <canvas>} element has been introduced in HTML5 to draw graphics via
 JavaScript. This element may be more convenient than SVG in situations where
@@ -198,9 +198,6 @@ the page \href{http://fred-wang.github.io/MathUI2014/demos/6-mathml-in-webgl.htm
 example of a 3D schemas for the magnetic field of a circular current loop.
 Again, see \cite{MathInEbooks} for more examples.
 
-\subsection{Web Components}
-\label{sec:webcomponents}
-
 One of the recent HTML5 features that is currently being implemented in Web
 rendering engines is Web Components \cite{WebComponents}.
 The idea is to allow Web developers to
@@ -218,7 +215,7 @@ sciencific Web app. For example, the specific interactive drawing of
 \href{http://fred-wang.github.io/MathUI2014/demos/5-canvas.html}{demos/5-canvas.html} for RLC circuits could become a generic widget 
 {\tt <x-graph>} to draw scientific graphs with some user interface to
 configure the curve parameters. As a proof-of-concept, we have used the X-Tag
-library to create a custom {\tt <x-tex>} tag. The behavior is simple: it
+library to create a custom {\tt <x-tex>} tag. The behavior is simple
 automatically converts its LaTeX content into MathML using TeXZilla, see
 \href{http://fred-wang.github.io/MathUI2014/demos/7-web-component.html}{demos/7-web-component.html}.
 The Mozilla MathML team is following the developments in Web components and
