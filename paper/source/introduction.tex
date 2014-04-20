@@ -2,48 +2,56 @@
 
 The Web has become an integral part of our daily life. Some of the reasons for
 its success are its open nature and the way it enables anyone to get access to
-knowledge and to create projects. The Mozilla community has worked since
-the early days of the Web to guarantee openness, innovation and opportunity.
+knowledge and to create his own projects. The Mozilla community has worked since
+the early days of the Web to guarantee openness, innovation and opportunity
+\cite{MozillaMission}.
 
-The Web was initially created at the CERN to share knowledge between
-researchers. But although it was invented by scientists, we still have not seen
+The Web was created at the CERN to share knowledge between researchers
+\cite{WebCreation}.
+But although it was invented by scientists, we still have not seen
 the same positive impact on scientific practice. There are two main reasons that
 could explain this situation and they are actually related each other.
 
 The first one is a human problem. Researchers have kept teaching students
 to write papers for publication in journals and to avoid sharing their detailed
-results because of competition between academic circles. This means that most
+results because of competition between academic groups. This means that most
 scientists ignore
 how to use tools to publish Web content and do not have the culture of openness
 and collaboration. Mozilla Science Lab was launched last year to remedy that
 problem and build educational resources, tools and prototypes for the research
-community.
+community \cite{MozillaScienceLab}.
 
-The second one is more technical:
-the lack of tools in the first years of Web and more recently the new tools
-available don't be used at the early years of undergraduate and graduate
-courses. In science, technology, engineering and mathematics there is one extra
-technical problem:
+The second one is more technical. At the beginning of the Web, we had no tools
+to write scientific documents that could effectively replace the traditional ones
+for publication on papers. Moreover, the tools currently available are not used
+during the early years of undergraduate and graduate courses.
+In science, there is one extra technical problem:
 we still lack a cross-compatible way to publish
-mathematics on the Web despite the publication of the MathML standard in 1998.
-The Mozilla MathML Project
+mathematics on the Web despite the publication of the MathML standard in 1998
+\cite{W3CMathHome}.
+The Mozilla MathML Project \cite{MozillaMathML}
 was launched in 1999 and in a few years, the team produced a good MathML
 implementation in Gecko together with tools to publish mathematics on the Web.
 MathML finally
-became part of HTML5 thanks to Mozilla's effort, but other Web rendering
-engines still have limited support or even no support at all. This means that
+became part of HTML5 thanks to Mozilla's effort \cite{MozillaMathMLHTML5},
+but other Web rendering
+engines still have limited support or even no support at all
+\cite{MathMLForgesOn}. This means that
 scientists either stay outside the Web (e.g. exchange only PDF documents) or
-rely on some workarounds to publish mathematical content on the Web, with
-their inherent limitations and issues.
+rely on some workarounds (PNG images, CSS stylesheet, Javascript polyfills)
+to publish mathematical content on the Web, with their inherent limitations and
+issues.
 
 In recent years, the mobile market has grown considerably and more and more
 people are using mobile devices to access the Web. Mozilla has been working
-on an open-source operating system for these mobile devices that
-relies on open standards and in particular Web technologies. Thanks to
+on Firefox OS, an open-source operating system for these mobile devices that
+relies on open standards and in particular Web technologies
+\cite{MozillaFirefoxOS}. Thanks to
 Gecko's good support for MathML and HTML5 in general as well as
 Mozilla's long experience with community submission, we now have the opportunity
 to build a family of Scientific Web applications for Firefox OS devices.
-Some of our early prototypes are presented in this paper.
+Some of the early prototypes created by the Mozilla MathML team are presented
+in this paper.
 
 In a first part, we will review the Web platforms and focus on how the
 technologies can be used for science. We will present the classical features
@@ -51,15 +59,15 @@ as well as more recent improvements that have been integrated in Mozilla
 projects recently such as the Open Type MATH table, WebGL, Web Components or
 TeXZilla. Some of this work has been made during the crowdfunding project
 ``Mathematics in ebooks'' which has also resulted in the creation of collection
-of scientific documents using advanced Web technologies.
+of scientific documents using advanced Web technologies \cite{MathInEbooks}.
 
 In a second
 part, we will study how to use these technologies to write Firefox OS Web apps
 for Science and introduce a few of the tools recently developed by the Mozilla
-MathML team.
+MathML team. TODO: list the apps!
 
 The authors have written this paper using collaboration tools like GitHub and
-all the sources, programs and tools presented here are Open. Because 
+all the sources, programs and tools presented here are open. Because 
 \href{http://fred-wang.github.io/MathUI2014/paper/output/MathUI2014-MozillaMathML.pdf}{PDF format}
 has been requested for submission to the MathUI workshop, we had to provide
 \href{http://fred-wang.github.io/MathUI2014/demos/}{our demos} separately instead of integrating them directly in the document.
