@@ -1,4 +1,4 @@
-\documentclass{report}
+\documentclass{article}
 
 \usepackage{xunicode}
 \usepackage{fontspec}
@@ -11,6 +11,8 @@
 \usepackage{enumerate}
 \usepackage{hyperref}
 
+\usepackage{graphicx}
+
 \begin{document}
 
 \title{Firefox OS Web Apps for Science}
@@ -19,13 +21,11 @@ Raniere Silva and Frédéric Wang\\
 \\
 Mozilla MathML Project}
 
-\include{abstract}
-
-\maketitle
-
-\tableofcontents
-
-\include{acknowledgments}
+\begin{minipage}[h]{\textwidth}
+  \maketitle
+  \include{abstract}
+  \tableofcontents
+\end{minipage}
 
 \include{introduction}
 \include{WebPlatform}

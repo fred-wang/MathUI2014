@@ -1,22 +1,24 @@
-\chapter{The Web Platform}
+\section{The Web Platform}
 
-\section{Overview}
+\subsection{Overview}
 
-All the technologies presented in this chapter are based on Web standards and
+All the technologies presented in this section are based on Web standards and
 should be supported by any Web rendering engines. We will particularly be
 interested in Gecko which has the best native MathML support and is the core
-of FirefoxOS. We will present some of the improvements that have been made
+of Firefox OS. We will present some of the improvements that have been made
 by the Mozilla MathML team.
 
 All these technologies should be usable in HTML documents. This obviously
-includes Web pages but also EPUB ebooks, HTML mails, Browser add-ons, or
+includes Web pages but also EPUB ebooks, HTML mails, browser add-ons or
 Firefox OS Web apps. For example, it is possible to receive and send emails
-with mathematical equations using Thunderbird or Seamonkey's mail client.
+with mathematical equations using Thunderbird or Seamonkey's mail client
+\cite{MathInEmails}.
 In this paper, we will mainly
-focus on Firefox OS Web apps but keep in mind that all the features apply in
-other context too.
+focus on Firefox OS Web apps but one should keep in mind that all the features
+apply in other context too.
 
-\section{Basic HTML5 Features}
+\subsection{Basic HTML5 Features}
+\label{sec:basic}
 
 The main language is HTML5, which allows to create pages with headers,
 paragraphs, tables, hyperlinks etc The well-known CSS language is used to
@@ -24,69 +26,80 @@ apply specific style to HTML5 and is powerful enough to produce advanced
 designs. Finally, DOM/Javascript provides a programming language and enables
 interactive documents and complex user interface. New HTML5 elements
 gives other possibilities . For example the document
-{\tt pendulum-20131125} of the ``Mathematics in ebooks'' project uses the
+{\tt pendulum-20131125} of \cite{MathInEbooks} uses the
 the {\tt <video>} tag to insert some sequences of a physics lecture.
 
 For scientific documents, we need two other features: creating graphs, schemas,
 diagrams etc and writing mathematical formulas. For the former, simple PNG
 images might be enough. However, Web rendering engines also support the SVG
 language to let authors write scalable images using some simple drawing
-primitive. Many programs are available to generate scientific schemas in SVG
+primitives. Many programs are available to generate scientific schemas in SVG
 formats. Mathematical equations can be viewed as an extension of text layout
 and thus requires a good integration within HTML as done by
 Gecko's native MathML. The document \href{http://fred-wang.github.io/MathUI2014/demos/1-mathml-in-html.html}{demos/1-mathml-in-html.html} shows how
 various font properties apply to MathML text via CSS, the good alignment
-of inline equations and its the scalability.
+of inline equations and its scalability.
 
 One of the nice feature introduced some years ago in Gecko is the possibility
-to integrate MathML equation inside SVG images via the {\tt <foreignObject>}
+to integrate MathML equations inside SVG images via the {\tt <foreignObject>}
 element. People can then create
 scientific schemas with mathematical equations.
-We will also use this property later when we introduce {\tt <canvas>}.
+We will also use this property in section~\ref{sec:advanced}
+when we introduce {\tt <canvas>}.
 See \href{http://fred-wang.github.io/MathUI2014/demos/2-mathml-in-svg.svg}{demos/2-mathml-in-svg.svg} for an example of a SVG schema with
-MathML equations inside. LaTeXML 0.8 can generate
-such schemas from the LaTeX commands of the TikZ package.
+MathML equations inside. Again, some authoring tools exist to help generating
+such schemas.
 
 \href{http://fred-wang.github.io/MathUI2014/demos/3-mathml-javascript.html}{demos/3-mathml-javascript.html} is a small example of an
 interactive MathML formula. Javascript is used to allow the user to highlight
-each term of a 3-dimensional determinant and understand each term of the
-Sarrus' rule. Note that no particular Javascript API is needed, you just
-modify the MathML tree via the standard DOM interface and the rendering
+parts of a 3-dimensional determinant and understand each term of the
+Sarrus' rule. Note that no particular Javascript API is needed, one only
+modifies the MathML tree via the standard DOM interface and the rendering
 is automatically updated.
-This example is taken from the ``Mathematics in ebooks'' which contains
+This example is taken from \cite{MathInEbooks} which contains
 many other examples of this type.
 
 To conclude this review, we briefly mention classical Web features like
 Unicode characters, complex text layout (e.g. ligatures),
 right-to-left directionality, copy and paste, automatic line breaking and
 accessibility to users with disabilities.
-In general, these are well handled by Gecko. The two first
-works well in MathML too and right-to-left MathML has also been implemented in
-Gecko four years ago. For the fourth one, we have proposed a MathML Copy
-add-on for Firefox as a temporary solution. MathML line breaking is important
+In general, all these features are well handled by Web languages and rendering
+engines. The two first works well in Gecko's MathML
+too and right-to-left MathML was also implemented four years ago
+\cite{BugzillaLTR}.
+For the fourth one, we have proposed a
+\href{https://addons.mozilla.org/en-US/firefox/addon/mathml-copy/}{MathML Copy add-on} for Firefox as a temporary solution to
+\cite{BugzillaClipboard}. MathML line breaking \cite{BugzillaLinebreaking}
+is very important
 for small screens but to our knowledge, no CSS-compatible implementations exist.
-Finally, MathML accessibility is not available in Gecko contrary to
-other Web systems. We expect to
+Finally, MathML accessibility is not available in Gecko yet although it is
+provided by many other tools \cite{BugzillaAccessibility}. We expect to
 bring improvements to these three last points in order to get a complete Web
 platform for mathematical user interfaces.
 
-\section{Styling of Mathematics}
+\subsection{Styling of Mathematics}
 
-As seen in previous examples, one can use CSS the standard way to apply
+As seen in section~\ref{sec:basic}, one can use CSS the standard way to apply
 specific styles to mathematical equations. However, perhaps the most important
 style that scientists and publishers want is the rendering with a given
 mathematical font. Gecko has always used TeX heuristics to position scripts,
 fractions, roots etc but these rules do not necessarily work well for other
 fonts than Knuth's Computer Modern. Moreover, in order to draw stretchy and
 large operators the MathML code requires to pick and assembly specific glyphs
-from math fonts. So far, Gecko only some Unicode constructions and had
-few private per-font tables to do that. This means that without the appropriate
+from math fonts. So far, Gecko only knows a limited set of Unicode constructions
+and also has a
+few private per-font tables. This means that without the appropriate
 fonts installed, the quality of the MathML rendering could be very low.
 
 In order to solve that problem, we have started to implement Microsoft's
-OpenType MATH table, which is currently undergoing standardization at the
-MPEG group. We have started to use this table in order to provide a generic
-support for MATH fonts. In a nutshell, the main features are:
+OpenType MATH table \cite{OpenTypeMATHtable}, which is currently undergoing
+standardization at the MPEG group.
+We have started to use this table in order to provide a generic
+support for MATH fonts. 
+Note that MathML does not specify a precise way to render mathematical formulas
+and leave the details to the implementers. Relying on the MATH table will give
+more control to professional font designers.
+In a nutshell, the main features are:
 
 \begin{enumerate}
 
@@ -96,7 +109,7 @@ support for MATH fonts. In a nutshell, the main features are:
 
 \item Font parameters to define precisely the gaps, shifts, kerning etc of
   mathematical objects. Most of them are extensions to the TeX rules so it
-  is easy to integrate them in our MathML rendering engine.
+  is easy to integrate them into our MathML rendering engine.
 
 \item Font parameters specific to each glyph. At the moment, we only considered
   italic corrections.
@@ -112,28 +125,34 @@ most of them are distributed with a TeXLive distribution. Windows and Mac
 systems have respectively Cambria Math and STIX available. We have also
 experimented with PackageKit auto-installation on Linux. This means that
 missing appropriate fonts will become very unlikely on Desktop. We also have
-plans to make these fonts preinstalled on FirefoxOS. In any case, fallback
+plans to make these fonts preinstalled on Firefox OS
+\cite{BugzillaFirefoxOSFonts}. In any case, fallback
 downloadable Web fonts can also be used.
 
 The page \href{http://fred-wang.github.io/MathUI2014/demos/4-mathml-fonts.html}{demos/4-mathml-fonts.html} shows how to get various font style for
-a document. At the moment, it will not work correctly without a Nightly
-version of Gecko and some additional patches.
+a document: Asana, TeX Gyre Bonum, TeX Gyre Pagella, TeX Gyre Termes,
+Latin Modern, Neo Euler and XITS. At the moment, it will not work correctly
+without a Nightly version of Gecko and some additional patches but we expect
+that this work will be integrated into future Gecko releases.
 
-\section{TeXZilla}
+\subsection{TeXZilla}
 
 Mathematical formulas are complex and hence writing mathematics is difficult.
 Some tools like WYSIWYG editors or handwriting recognition might help. One
 input method easy to implement is the conversion from a simple syntax like
 LaTeX into MathML. Even if there are tons of such converters, only a few of
-them are implemented in Javascript. The remaining ones try to tweak the output
+them are implemented in Javascript. Moreover
+the remaining ones try to tweak the output
 to workaround browser limitations, are not standalone Javascript module usable
-in add-ons and do work with Unicode characters or right-to-left
+in add-ons and do not work with Unicode characters or right-to-left
 mathematics. Hence we decided to write yet another converters to focus on
 Mozilla's needs.
 
-We thus wrote TeXZilla, a LaTeX-to-MathML converter generated with the help of
-Jison and relies on a LALR(1) grammar and on the unicode.xml file of
-the XML Entity Definitions for Characters specification. It accepts arbitrary
+We thus wrote TeXZilla \cite{TeXZilla},
+a LaTeX-to-MathML converter generated with the help of
+\href{http://zaach.github.io/jison/docs/}{Jison}.
+It relies on a LALR(1) grammar and on the {\tt unicode.xml} file of
+\cite{XMLEntityDefinition}. It accepts arbitrary
 Unicode input as well as right-to-left mathematics, something that is important
 for the world-wide aspect of the Mozilla community and more specifically
 Arabic mathematics.
@@ -142,54 +161,61 @@ The public API contains a {\tt toMathML} function to convert a LaTeX string
 into a MathML DOM but also a {\tt toMathMLString} function when the DOM is
 not available (e.g. in nodejs). There is also a convenient {\tt getTeXSource}
 function to extract the LaTeX source from the MathML output and a
-{\tt toImage} function to embed the MathML output in a SVG image (see the next
-section).
+{\tt toImage} function to embed the MathML output inside a SVG image
+(see section~\ref{sec:advanced}).
 
 TeXZilla can work in any CommonJS program, in Web page, as a command line
 program or as a Web server. We have submitted a Firefox add-on
-that has been approved by the reviewers. We have also already integrated it in
+that has been approved by the reviewers. We have also already integrated it into
 various other Mozilla tools: in CKEditor for the Mozilla Developer Network,
-in the Seamonkey/Thunderbird composers or in a Firefox OS webapp (see next
-chapter). Finally, a prototype {\tt <x-tex>} custom element is also available
-(see Web Components). We expect it will become an important library for future
-Mozilla applications.
+in the Seamonkey/Thunderbird composers or in a Firefox OS webapp
+(see section~\ref{sec:firefoxOS}).
+Finally, a prototype {\tt <x-tex>} custom element is also available
+(see section~\ref{sec:advanced}).
+We expect it will become an important library for future Mozilla applications.
 
-\section{Canvas and WebGL}
+\subsection{Advanced HTML5 Features}
+\label{sec:advanced}
 
 The {\tt <canvas>} element has been introduced in HTML5 to draw graphics via
 JavaScript. This element may be more convenient than SVG in situations where
 you want to generate schemas dynamically. For example \href{http://fred-wang.github.io/MathUI2014/demos/5-canvas.html}{demos/5-canvas.html}
 shows the typical graphs associated to a RLC circuit that are automatically
 updated when the user changes the frequency of the current. It is also possible
-to use WebGL, opening the possibility to draw 3D scientific schemas. For example
-chemdoodle relies on WebGL to provide 3D representation of chemical structures.
+to use WebGL \cite{WebGLspec},
+opening the possibility to draw 3D scientific schemas. For example
+\href{http://www.chemdoodle.com/}{chemdoodle}
+relies on WebGL to provide 3D representation of chemical structures.
 
 As for SVG, 2D/3D scientific schemas created via the {\tt <canvas>} might
 require mathematical formulas. This is possible since we saw that MathML can be
 inserted in SVG via a {\tt <foreignObject>} and moreover SVG images can be
-inserted in both the CanvasRenderingContext2D and WebGLRenderingContext. One
+inserted in both the {\tt CanvasRenderingContext2D} and
+{\tt WebGLRenderingContext}. One
 can for example use TeXZilla's {\tt toImage} function to generate such SVG
-images dynamically. The page \href{http://fred-wang.github.io/MathUI2014/demos/6-mathml-in-webgl.html}{demos/6-mathml-in-webgl.html} shows an
-example of a 3D schemas with mathematical formulas inside.
-
-\section{Web Components}
+images dynamically. For instance,
+the page \href{http://fred-wang.github.io/MathUI2014/demos/6-mathml-in-webgl.html}{demos/6-mathml-in-webgl.html} shows an
+example of a 3D schemas for the magnetic field of a circular current loop.
+Again, see \cite{MathInEbooks} for more examples.
 
 One of the recent HTML5 features that is currently being implemented in Web
-rendering engines is Web Components. The idea is to allow Web developers to
+rendering engines is Web Components \cite{WebComponents}.
+The idea is to allow Web developers to
 create their own custom HTML elements. These elements are made of the so-called
-shadow tree, which is an ``internal'' representation from basic elements andCSS
+shadow tree, which is an ``internal'' representation from basic elements and CSS
 style to which we attach some behaviors with DOM events and Javascript. This is
 typically useful to create some reusable widgets. Mozilla's Brick project
-is a collection of such elements with demos. Web Components are currently
+is a collection of such elements with demos \cite{Brick}.
+Web Components are currently
 not fully implemented natively in browsers but some polyfill libraries like
-X-Tag allows to emulate their behavior.
+X-Tag allows to emulate their behavior \cite{XTag}.
 
 Web components can obviously be very helpful to design user inteface for
 sciencific Web app. For example, the specific interactive drawing of
-\href{http://fred-wang.github.io/MathUI2014/demos/5-canvas.html}{demos/5-canvas.html} for RLC circuits could be become a generic widget 
-{\tt <x-graph>} to draw scientific graphs with with some user interface to
+\href{http://fred-wang.github.io/MathUI2014/demos/5-canvas.html}{demos/5-canvas.html} for RLC circuits could become a generic widget 
+{\tt <x-graph>} to draw scientific graphs with some user interface to
 configure the curve parameters. As a proof-of-concept, we have used the X-Tag
-library to create a custom {\tt <x-tex>} tag. The behavior is simple: it
+library to create a custom {\tt <x-tex>} tag. The behavior is simple
 automatically converts its LaTeX content into MathML using TeXZilla, see
 \href{http://fred-wang.github.io/MathUI2014/demos/7-web-component.html}{demos/7-web-component.html}.
 The Mozilla MathML team is following the developments in Web components and
