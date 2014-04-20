@@ -1,6 +1,6 @@
-\chapter{The Web Platform}
+\section{The Web Platform}
 
-\section{Overview}
+\subsection{Overview}
 
 All the technologies presented in this chapter are based on Web standards and
 should be supported by any Web rendering engines. We will particularly be
@@ -16,7 +16,7 @@ In this paper, we will mainly
 focus on Firefox OS Web apps but keep in mind that all the features apply in
 other context too.
 
-\section{Basic HTML5 Features}
+\subsection{Basic HTML5 Features}
 
 The main language is HTML5, which allows to create pages with headers,
 paragraphs, tables, hyperlinks etc The well-known CSS language is used to
@@ -70,7 +70,7 @@ other Web systems. We expect to
 bring improvements to these three last points in order to get a complete Web
 platform for mathematical user interfaces.
 
-\section{Styling of Mathematics}
+\subsection{Styling of Mathematics}
 
 As seen in previous examples, one can use CSS the standard way to apply
 specific styles to mathematical equations. However, perhaps the most important
@@ -119,7 +119,7 @@ The page \href{http://fred-wang.github.io/MathUI2014/demos/4-mathml-fonts.html}{
 a document. At the moment, it will not work correctly without a Nightly
 version of Gecko and some additional patches.
 
-\section{TeXZilla}
+\subsection{TeXZilla}
 
 Mathematical formulas are complex and hence writing mathematics is difficult.
 Some tools like WYSIWYG editors or handwriting recognition might help. One
@@ -143,7 +143,7 @@ into a MathML DOM but also a {\tt toMathMLString} function when the DOM is
 not available (e.g. in nodejs). There is also a convenient {\tt getTeXSource}
 function to extract the LaTeX source from the MathML output and a
 {\tt toImage} function to embed the MathML output in a SVG image (see the next
-section).
+subsection).
 
 TeXZilla can work in any CommonJS program, in Web page, as a command line
 program or as a Web server. We have submitted a Firefox add-on
@@ -154,7 +154,7 @@ chapter). Finally, a prototype {\tt <x-tex>} custom element is also available
 (see Web Components). We expect it will become an important library for future
 Mozilla applications.
 
-\section{Canvas and WebGL}
+\subsection{Canvas and WebGL}
 
 The {\tt <canvas>} element has been introduced in HTML5 to draw graphics via
 JavaScript. This element may be more convenient than SVG in situations where
@@ -172,7 +172,7 @@ can for example use TeXZilla's {\tt toImage} function to generate such SVG
 images dynamically. The page \href{http://fred-wang.github.io/MathUI2014/demos/6-mathml-in-webgl.html}{demos/6-mathml-in-webgl.html} shows an
 example of a 3D schemas with mathematical formulas inside.
 
-\section{Web Components}
+\subsection{Web Components}
 
 One of the recent HTML5 features that is currently being implemented in Web
 rendering engines is Web Components. The idea is to allow Web developers to

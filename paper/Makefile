@@ -18,6 +18,6 @@ pdf:
 
 html:
 	cd source; \
-	$(LATEXMLC) --dest ../output/index.html --format=html5 --splitat=section MathUI2014-MozillaMathML.tex
+	$(LATEXMLC) --dest ../output/index.html --format=html5 --splitat=subsection MathUI2014-MozillaMathML.tex
 
 .PHONY: clean distclean pdf html all
