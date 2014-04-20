@@ -32,7 +32,7 @@ For scientific documents, we need two other features: creating graphs, schemas,
 diagrams etc and writing mathematical formulas. For the former, simple PNG
 images might be enough. However, Web rendering engines also support the SVG
 language to let authors write scalable images using some simple drawing
-primitive. Many programs are available to generate scientific schemas in SVG
+primitives. Many programs are available to generate scientific schemas in SVG
 formats. Mathematical equations can be viewed as an extension of text layout
 and thus requires a good integration within HTML as done by
 Gecko's native MathML. The document \href{http://fred-wang.github.io/MathUI2014/demos/1-mathml-in-html.html}{demos/1-mathml-in-html.html} shows how
@@ -40,7 +40,7 @@ various font properties apply to MathML text via CSS, the good alignment
 of inline equations and its scalability.
 
 One of the nice feature introduced some years ago in Gecko is the possibility
-to integrate MathML equation inside SVG images via the {\tt <foreignObject>}
+to integrate MathML equations inside SVG images via the {\tt <foreignObject>}
 element. People can then create
 scientific schemas with mathematical equations.
 We will also use this property later when we introduce {\tt <canvas>}.
@@ -50,9 +50,9 @@ such schemas.
 
 \href{http://fred-wang.github.io/MathUI2014/demos/3-mathml-javascript.html}{demos/3-mathml-javascript.html} is a small example of an
 interactive MathML formula. Javascript is used to allow the user to highlight
-each term of a 3-dimensional determinant and understand each term of the
-Sarrus' rule. Note that no particular Javascript API is needed, you just
-modify the MathML tree via the standard DOM interface and the rendering
+parts of a 3-dimensional determinant and understand each term of the
+Sarrus' rule. Note that no particular Javascript API is needed, one only
+modifies the MathML tree via the standard DOM interface and the rendering
 is automatically updated.
 This example is taken from \cite{MathInEbooks} which contains
 many other examples of this type.
@@ -63,8 +63,8 @@ right-to-left directionality, copy and paste, automatic line breaking and
 accessibility to users with disabilities.
 In general, all these features are well handled by Web languages and rendering
 engines. The two first works well in Gecko's MathML
-too and right-to-left MathML has also been implemented in
-Gecko four years ago \cite{BugzillaLTR}.
+too and right-to-left MathML was also implemented four years ago
+\cite{BugzillaLTR}.
 For the fourth one, we have proposed a
 \href{https://addons.mozilla.org/en-US/firefox/addon/mathml-copy/}{MathML Copy add-on} for Firefox as a temporary solution to
 \cite{BugzillaClipboard}. MathML line breaking \cite{BugzillaLinebreaking}
