@@ -1,0 +1,123 @@
+<!DOCTYPE html><html>
+<head>
+<title>1.3 Styling of Mathematics‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science</title>
+<!--Generated on Sun Apr 20 17:54:57 2014 by LaTeXML (version 0.7.999_04) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on April 20, 2014.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../output/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="../output/ltx-article.css" type="text/css">
+<link rel="up" href="S1.html" title="1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="up up" href="." title="Firefox OS Web Apps for Science">
+<link rel="start" href="." title="Firefox OS Web Apps for Science">
+<link rel="prev" href="S1.SS2.html" title="1.2 Basic HTML5 Features ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="next" href="S1.SS4.html" title="1.4 TeXZilla ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="subsection" href="S1.SS1.html" title="1.1 Overview ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="subsection" href="S1.SS2.html" title="1.2 Basic HTML5 Features ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="subsection" href="S1.SS4.html" title="1.4 TeXZilla ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="subsection" href="S1.SS5.html" title="1.5 Advanced HTML5 Features ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="section" href="Sx1.html" title="Introduction ‣ Firefox OS Web Apps for Science">
+<link rel="section" href="S1.html" title="1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="section" href="S2.html" title="2 Firefox OS ‣ Firefox OS Web Apps for Science">
+<link rel="section" href="Sx2.html" title="Conclusion ‣ Firefox OS Web Apps for Science">
+<link rel="bibliography" href="bib.html" title="References ‣ Firefox OS Web Apps for Science">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div>
+<a href="S1.html" title="1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>The Web Platform</span></a><a href="S1.SS2.html" title="1.2 Basic HTML5 Features ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.2 </span>Basic HTML5 Features</span></a><a href="S1.SS4.html" title="1.4 TeXZilla ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4 </span>TeXZilla</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.3 </span>Styling of Mathematics</h1>
+<div class="ltx_date ltx_role_creation"></div>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">As seen in section <a href="S1.SS2.html" title="1.2 Basic HTML5 Features ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.2</span></a>, one can use CSS the standard way to apply
+specific styles to mathematical equations. However, perhaps the most important
+style that scientists and publishers want is the rendering with a given
+mathematical font. Gecko has always used TeX heuristics to position scripts,
+fractions, roots etc but these rules do not necessarily work well for other
+fonts than Knuth’s Computer Modern. Moreover, in order to draw stretchy and
+large operators the MathML code requires to pick and assembly specific glyphs
+from math fonts. So far, Gecko only knows a limited set of Unicode constructions
+and also has a
+few private per-font tables. This means that without the appropriate
+fonts installed, the quality of the MathML rendering could be very low.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">In order to solve that problem, we have started to implement Microsoft’s
+OpenType MATH table <cite class="ltx_cite">[<a href="bib.html#bibx20" title="" class="ltx_ref">Mic1</a>]</cite>, which is currently undergoing
+standardization at the MPEG group.
+We have started to use this table in order to provide a generic
+support for MATH fonts.
+Note that MathML does not specify a precise way to render mathematical formulas
+and leave the details to the implementers. Relying on the MATH table will give
+more control to professional font designers.
+In a nutshell, the main features are:</p>
+</div>
+<div id="p3" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Some OpenType Tags to provide alternate form of glyphs. For example,
+we implemented the ”ssty” feature to adjust the size of glyphs like primes
+when they are used as scripts.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Font parameters to define precisely the gaps, shifts, kerning etc of
+mathematical objects. Most of them are extensions to the TeX rules so it
+is easy to integrate them into our MathML rendering engine.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">Font parameters specific to each glyph. At the moment, we only considered
+italic corrections.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">A table to draw stretchy and large operators such as parenthesis,
+radicals or summation symbols. We have started to use that table for our
+operator stretching code.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">There are various mathematical fonts with an OpenType MATH table available and
+most of them are distributed with a TeXLive distribution. Windows and Mac
+systems have respectively Cambria Math and STIX available. We have also
+experimented with PackageKit auto-installation on Linux. This means that
+missing appropriate fonts will become very unlikely on Desktop. We also have
+plans to make these fonts preinstalled on Firefox OS
+<cite class="ltx_cite">[<a href="bib.html#bibx19" title="" class="ltx_ref">Bugzilla775060</a>]</cite>. In any case, fallback
+downloadable Web fonts can also be used.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The page <a href="http://fred-wang.github.io/MathUI2014/demos/4-mathml-fonts.html" title="" class="ltx_ref">demos/4-mathml-fonts.html</a> shows how to get various font style for
+a document: Asana, TeX Gyre Bonum, TeX Gyre Pagella, TeX Gyre Termes,
+Latin Modern, Neo Euler and XITS. At the moment, it will not work correctly
+without a Nightly version of Gecko and some additional patches but we expect
+that this work will be integrated into future Gecko releases.</p>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="S1.SS2.html" title="1.2 Basic HTML5 Features ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.2 </span>Basic HTML5 Features</span></a><a href="bib.html" title="References ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="S1.SS4.html" title="1.4 TeXZilla ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4 </span>TeXZilla</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sun Apr 20 17:54:57 2014 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}The Web Platform}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Overview}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Basic HTML5 Features}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Styling of Mathematics}{3}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}TeXZilla}{4}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Advanced HTML5 Features}{5}{subsection.1.5}
+\contentsline {section}{\numberline {2}Firefox OS}{6}{section.2}
+\contentsline {subsection}{\numberline {2.1}Overview}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Math Suite}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Math Cheat Sheet}{6}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}TeXZilla App}{7}{subsection.2.4}
