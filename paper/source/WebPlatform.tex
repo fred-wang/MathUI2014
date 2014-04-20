@@ -2,19 +2,20 @@
 
 \subsection{Overview}
 
-All the technologies presented in this chapter are based on Web standards and
+All the technologies presented in this section are based on Web standards and
 should be supported by any Web rendering engines. We will particularly be
 interested in Gecko which has the best native MathML support and is the core
 of Firefox OS. We will present some of the improvements that have been made
 by the Mozilla MathML team.
 
 All these technologies should be usable in HTML documents. This obviously
-includes Web pages but also EPUB ebooks, HTML mails, Browser add-ons, or
+includes Web pages but also EPUB ebooks, HTML mails, browser add-ons or
 Firefox OS Web apps. For example, it is possible to receive and send emails
-with mathematical equations using Thunderbird or Seamonkey's mail client.
+with mathematical equations using Thunderbird or Seamonkey's mail client
+\cite{MathInEmails}.
 In this paper, we will mainly
-focus on Firefox OS Web apps but keep in mind that all the features apply in
-other context too.
+focus on Firefox OS Web apps but one should keep in mind that all the features
+apply in other context too.
 
 \subsection{Basic HTML5 Features}
 
@@ -24,7 +25,7 @@ apply specific style to HTML5 and is powerful enough to produce advanced
 designs. Finally, DOM/Javascript provides a programming language and enables
 interactive documents and complex user interface. New HTML5 elements
 gives other possibilities . For example the document
-{\tt pendulum-20131125} of the ``Mathematics in ebooks'' project uses the
+{\tt pendulum-20131125} of \cite{MathInEbooks} uses the
 the {\tt <video>} tag to insert some sequences of a physics lecture.
 
 For scientific documents, we need two other features: creating graphs, schemas,
@@ -36,7 +37,7 @@ formats. Mathematical equations can be viewed as an extension of text layout
 and thus requires a good integration within HTML as done by
 Gecko's native MathML. The document \href{http://fred-wang.github.io/MathUI2014/demos/1-mathml-in-html.html}{demos/1-mathml-in-html.html} shows how
 various font properties apply to MathML text via CSS, the good alignment
-of inline equations and its the scalability.
+of inline equations and its scalability.
 
 One of the nice feature introduced some years ago in Gecko is the possibility
 to integrate MathML equation inside SVG images via the {\tt <foreignObject>}
@@ -44,8 +45,8 @@ element. People can then create
 scientific schemas with mathematical equations.
 We will also use this property later when we introduce {\tt <canvas>}.
 See \href{http://fred-wang.github.io/MathUI2014/demos/2-mathml-in-svg.svg}{demos/2-mathml-in-svg.svg} for an example of a SVG schema with
-MathML equations inside. LaTeXML 0.8 can generate
-such schemas from the LaTeX commands of the TikZ package.
+MathML equations inside. Again, some authoring tools exist to help generating
+such schemas.
 
 \href{http://fred-wang.github.io/MathUI2014/demos/3-mathml-javascript.html}{demos/3-mathml-javascript.html} is a small example of an
 interactive MathML formula. Javascript is used to allow the user to highlight
@@ -53,20 +54,24 @@ each term of a 3-dimensional determinant and understand each term of the
 Sarrus' rule. Note that no particular Javascript API is needed, you just
 modify the MathML tree via the standard DOM interface and the rendering
 is automatically updated.
-This example is taken from the ``Mathematics in ebooks'' which contains
+This example is taken from \cite{MathInEbooks} which contains
 many other examples of this type.
 
 To conclude this review, we briefly mention classical Web features like
 Unicode characters, complex text layout (e.g. ligatures),
 right-to-left directionality, copy and paste, automatic line breaking and
 accessibility to users with disabilities.
-In general, these are well handled by Gecko. The two first
-works well in MathML too and right-to-left MathML has also been implemented in
-Gecko four years ago. For the fourth one, we have proposed a MathML Copy
-add-on for Firefox as a temporary solution. MathML line breaking is important
+In general, all these features are well handled by Web languages and rendering
+engines. The two first works well in Gecko's MathML
+too and right-to-left MathML has also been implemented in
+Gecko four years ago \cite{BugzillaLTR}.
+For the fourth one, we have proposed a
+\href{https://addons.mozilla.org/en-US/firefox/addon/mathml-copy/}{MathML Copy add-on} for Firefox as a temporary solution to
+\cite{BugzillaClipboard}. MathML line breaking \cite{BugzillaLinebreaking}
+is very important
 for small screens but to our knowledge, no CSS-compatible implementations exist.
-Finally, MathML accessibility is not available in Gecko contrary to
-other Web systems. We expect to
+Finally, MathML accessibility is not available in Gecko yet although it is
+provided by many other tools \cite{BugzillaAccessibility}. We expect to
 bring improvements to these three last points in order to get a complete Web
 platform for mathematical user interfaces.
 
