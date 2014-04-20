@@ -44,7 +44,7 @@ One of the nice feature introduced some years ago in Gecko is the possibility
 to integrate MathML equations inside SVG images via the {\tt <foreignObject>}
 element. People can then create
 scientific schemas with mathematical equations.
-We will also use this property in section~\ref{sec:advanced}
+We will also use this property in section \ref{sec:advanced}
 when we introduce {\tt <canvas>}.
 See \href{http://fred-wang.github.io/MathUI2014/demos/2-mathml-in-svg.svg}{demos/2-mathml-in-svg.svg} for an example of a SVG schema with
 MathML equations inside. Again, some authoring tools exist to help generating
@@ -79,7 +79,7 @@ platform for mathematical user interfaces.
 
 \subsection{Styling of Mathematics}
 
-As seen in section~\ref{sec:basic}, one can use CSS the standard way to apply
+As seen in section \ref{sec:basic}, one can use CSS the standard way to apply
 specific styles to mathematical equations. However, perhaps the most important
 style that scientists and publishers want is the rendering with a given
 mathematical font. Gecko has always used TeX heuristics to position scripts,
@@ -162,16 +162,16 @@ into a MathML DOM but also a {\tt toMathMLString} function when the DOM is
 not available (e.g. in nodejs). There is also a convenient {\tt getTeXSource}
 function to extract the LaTeX source from the MathML output and a
 {\tt toImage} function to embed the MathML output inside a SVG image
-(see section~\ref{sec:advanced}).
+(see section \ref{sec:advanced}).
 
 TeXZilla can work in any CommonJS program, in Web page, as a command line
 program or as a Web server. We have submitted a Firefox add-on
 that has been approved by the reviewers. We have also already integrated it into
 various other Mozilla tools: in CKEditor for the Mozilla Developer Network,
 in the Seamonkey/Thunderbird composers or in a Firefox OS webapp
-(see section~\ref{sec:firefoxOS}).
+(see section \ref{sec:firefoxOS}).
 Finally, a prototype {\tt <x-tex>} custom element is also available
-(see section~\ref{sec:advanced}).
+(see section \ref{sec:advanced}).
 We expect it will become an important library for future Mozilla applications.
 
 \subsection{Advanced HTML5 Features}
