@@ -3,7 +3,7 @@
 \subsection{Overview}
 
 All the technologies presented in this section are based on Web standards and
-should be supported by any Web rendering engines. We will particularly be
+should be supported by any Web rendering engine. We will particularly be
 interested in Gecko which has the best native MathML support and is the core
 of Firefox OS. We will present some of the improvements that have been made
 by the Mozilla MathML team.
@@ -15,7 +15,7 @@ with mathematical equations using Thunderbird or Seamonkey's mail client
 \cite{MathInEmails}.
 In this paper, we will mainly
 focus on Firefox OS Web apps but one should keep in mind that all the features
-apply in other context too.
+apply in other contexts too.
 
 \subsection{Basic HTML5 Features}
 \label{sec:basic}
@@ -24,7 +24,7 @@ The main language is HTML5, which allows to create pages with headers,
 paragraphs, tables, hyperlinks etc The well-known CSS language is used to
 apply specific style to HTML5 and is powerful enough to produce advanced
 designs. Finally, DOM/Javascript provides a programming language and enables
-interactive documents and complex user interface. New HTML5 elements
+interactive documents and complex user interfaces. New HTML5 elements
 gives other possibilities . For example the document
 {\tt pendulum-20131125} of \cite{MathInEbooks} uses the
 the {\tt <video>} tag to insert some sequences of a physics lecture.
@@ -164,15 +164,16 @@ function to extract the LaTeX source from the MathML output and a
 {\tt toImage} function to embed the MathML output inside a SVG image
 (see section \ref{sec:advanced}).
 
-TeXZilla can work in any CommonJS program, in Web page, as a command line
-program or as a Web server. We have submitted a Firefox add-on
+TeXZilla can work in any CommonJS program, in Web pages, as a command line
+program or as a Web server. We have submitted a \href{https://addons.mozilla.org/en-US/firefox/addon/texzilla/}{Firefox add-on}
 that has been approved by the reviewers. We have also already integrated it into
 various other Mozilla tools: in CKEditor for the Mozilla Developer Network,
 in the Seamonkey/Thunderbird composers or in a Firefox OS webapp
-(see section \ref{sec:firefoxOS}).
+(see section \ref{sec:texzillapp}).
 Finally, a prototype {\tt <x-tex>} custom element is also available
 (see section \ref{sec:advanced}).
-We expect it will become an important library for future Mozilla applications.
+We expect it will become an important library for future scientific
+applications.
 
 \subsection{Advanced HTML5 Features}
 \label{sec:advanced}
@@ -188,7 +189,8 @@ opening the possibility to draw 3D scientific schemas. For example
 relies on WebGL to provide 3D representation of chemical structures.
 
 As for SVG, 2D/3D scientific schemas created via the {\tt <canvas>} might
-require mathematical formulas. This is possible since we saw that MathML can be
+require mathematical formulas. This is possible since we saw in section
+\ref{sec:basic} that MathML can be
 inserted in SVG via a {\tt <foreignObject>} and moreover SVG images can be
 inserted in both the {\tt CanvasRenderingContext2D} and
 {\tt WebGLRenderingContext}. One
@@ -205,7 +207,7 @@ create their own custom HTML elements. These elements are made of the so-called
 shadow tree, which is an ``internal'' representation from basic elements and CSS
 style to which we attach some behaviors with DOM events and Javascript. This is
 typically useful to create some reusable widgets. Mozilla's Brick project
-is a collection of such elements with demos \cite{Brick}.
+is a collection of such elements and contains many demos \cite{Brick}.
 Web Components are currently
 not fully implemented natively in browsers but some polyfill libraries like
 X-Tag allows to emulate their behavior \cite{XTag}.
@@ -215,7 +217,7 @@ sciencific Web app. For example, the specific interactive drawing of
 \href{http://fred-wang.github.io/MathUI2014/demos/5-canvas.html}{demos/5-canvas.html} for RLC circuits could become a generic widget 
 {\tt <x-graph>} to draw scientific graphs with some user interface to
 configure the curve parameters. As a proof-of-concept, we have used the X-Tag
-library to create a custom {\tt <x-tex>} tag. The behavior is simple
+library to create a custom {\tt <x-tex>} tag. The behavior is simply to
 automatically converts its LaTeX content into MathML using TeXZilla, see
 \href{http://fred-wang.github.io/MathUI2014/demos/7-web-component.html}{demos/7-web-component.html}.
 The Mozilla MathML team is following the developments in Web components and
