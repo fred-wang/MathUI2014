@@ -1,6 +1,6 @@
 {
     "name": "MathUI App Prototype",
-    "description": "Prototype for work submited to MathUI",
+    "description": "Prototype for work submitted to MathUI",
     "launch_path": "/index.html",
     "icons": {
         "128": "/icon.png"
