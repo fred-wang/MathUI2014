@@ -106,3 +106,28 @@ only cover a few commands since the best solution is that the mobile devices
 have a virtual keyboard developed with the focus in math (we have plans to build
 such keyboard to Firefox OS) and desktop users can rely in a similar keyboard
 make available as a add-on.
+
+\subsection{DynAlgebra}
+
+This is a Dynamic Algebra \cite{Nicaud1}, ``algebraic calculations
+on a computer by direct manipulation'', app available at
+\href{http://r-gaia-cs.github.io/DynAlgebra/}{http://r-gaia-cs.github.io/DynAlgebra/}.
+The idea of Dynamic Algebra is about twenty years old and although could help
+students to learn formula structure and transformations and help every user to
+produce step by step explained calculations most of the previous implementation
+have not been successful.
+
+The last know implementation of Dynamic Algebra was done in EpsilonWriter
+\cite{Nicaud2} as a Java application and covers:
+\begin{description}
+  \item[internal drag \& drop] like convert $x + y + z$ into $y + x + z$,
+  \item[external drag \& drop] as dropping a formula on another formula,
+  \item[on click calculation] like convert $x + x$ into $2 x$ and
+  \item[rewriting rules] like convert $x^{-n}$ into $\frac{1}{x^n}$.
+\end{description}
+Our app, wrote in Javascript, is younger that EpsilonWriter and only partially
+cover the ``on click calculation'' but uses MathML as storage format what enable
+it to be add in a previous document not intended to be used for Dynamic Algebra.
+
+For input of equations our app uses TeXZilla since we don't have a WYSIWYG
+editor.
