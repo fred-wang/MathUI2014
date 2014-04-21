@@ -1,8 +1,8 @@
 <!DOCTYPE html><html>
 <head>
 <title>Introduction‣ Firefox OS Web Apps for Science</title>
-<!--Generated on Sun Apr 20 17:54:57 2014 by LaTeXML (version 0.7.999_04) http://dlmf.nist.gov/LaTeXML/.-->
-<!--Document created on April 20, 2014.-->
+<!--Generated on Mon Apr 21 17:00:10 2014 by LaTeXML (version 0.7.999_04) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on April 21, 2014.-->
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../output/LaTeXML.css" type="text/css">
@@ -32,14 +32,14 @@
 its success are its open nature and the way it enables anyone to get access to
 knowledge and to create his own projects. The Mozilla community has worked since
 the early days of the Web to guarantee openness, innovation and opportunity
-<cite class="ltx_cite">[<a href="bib.html#bibx1" title="" class="ltx_ref">Moz1</a>]</cite>.</p>
+<cite class="ltx_cite">[<a href="bib.html#bibx6" title="" class="ltx_ref">Moz1</a>]</cite>.</p>
 </div>
 <div id="p2" class="ltx_para">
 <p class="ltx_p">The Web was created at the CERN to share knowledge between researchers
-<cite class="ltx_cite">[<a href="bib.html#bibx8" title="" class="ltx_ref">W3C1</a>]</cite>.
+<cite class="ltx_cite">[<a href="bib.html#bibx17" title="" class="ltx_ref">W3C1</a>]</cite>.
 But although it was invented by scientists, we still have not seen
 the same positive impact on scientific practice. There are two main reasons that
-could explain this situation and they are actually related each other.</p>
+could explain this situation and they are actually related to each other.</p>
 </div>
 <div id="p3" class="ltx_para">
 <p class="ltx_p">The first one is a human problem. Researchers have kept teaching students
@@ -49,25 +49,27 @@ scientists ignore
 how to use tools to publish Web content and do not have the culture of openness
 and collaboration. Mozilla Science Lab was launched last year to remedy that
 problem and build educational resources, tools and prototypes for the research
-community <cite class="ltx_cite">[<a href="bib.html#bibx2" title="" class="ltx_ref">Moz2</a>]</cite>.</p>
+community <cite class="ltx_cite">[<a href="bib.html#bibx7" title="" class="ltx_ref">Moz2</a>]</cite>.</p>
 </div>
 <div id="p4" class="ltx_para">
 <p class="ltx_p">The second one is more technical. At the beginning of the Web, we had no tools
-to write scientific documents that could effectively replace the traditional ones
-for publication on papers. Moreover, the tools currently available are not used
+to write scientific documents that could effectively replace the traditional
+authoring tools for publication on papers.
+Even if some tools are now available - such as those used to write this paper -
+they are still not used
 during the early years of undergraduate and graduate courses.
 In science, there is one extra technical problem:
 we still lack a cross-compatible way to publish
 mathematics on the Web despite the publication of the MathML standard in 1998
-<cite class="ltx_cite">[<a href="bib.html#bibx9" title="" class="ltx_ref">W3C2</a>]</cite>.
-The Mozilla MathML Project <cite class="ltx_cite">[<a href="bib.html#bibx3" title="" class="ltx_ref">Moz3</a>]</cite>
+<cite class="ltx_cite">[<a href="bib.html#bibx18" title="" class="ltx_ref">W3C2</a>]</cite>.
+The Mozilla MathML Project <cite class="ltx_cite">[<a href="bib.html#bibx8" title="" class="ltx_ref">Moz3</a>]</cite>
 was launched in 1999 and in a few years, the team produced a good MathML
 implementation in Gecko together with tools to publish mathematics on the Web.
 MathML finally
-became part of HTML5 thanks to Mozilla’s effort <cite class="ltx_cite">[<a href="bib.html#bibx4" title="" class="ltx_ref">Moz4</a>]</cite>,
+became part of HTML5 thanks to Mozilla’s effort <cite class="ltx_cite">[<a href="bib.html#bibx9" title="" class="ltx_ref">Moz4</a>]</cite>,
 but other Web rendering
 engines still have limited support or even no support at all
-<cite class="ltx_cite">[<a href="bib.html#bibx11" title="" class="ltx_ref">Oreilly1</a>]</cite>. This means that
+<cite class="ltx_cite">[<a href="bib.html#bibx16" title="" class="ltx_ref">Oreilly1</a>]</cite>. This means that
 scientists either stay outside the Web (e.g. exchange only PDF documents) or
 rely on some workarounds (PNG images, CSS stylesheet, Javascript polyfills)
 to publish mathematical content on the Web, with their inherent limitations and
@@ -78,34 +80,38 @@ issues.</p>
 people are using mobile devices to access the Web. Mozilla has been working
 on Firefox OS, an open-source operating system for these mobile devices that
 relies exclusively on open standards and in particular Web technologies
-<cite class="ltx_cite">[<a href="bib.html#bibx5" title="" class="ltx_ref">Moz4</a>]</cite>. Thanks to
+<cite class="ltx_cite">[<a href="bib.html#bibx11" title="" class="ltx_ref">Moz4</a>]</cite>. Thanks to
 Gecko’s good support for MathML and HTML5 in general as well as
 Mozilla’s long experience with community involvement, we now have the opportunity
-to build a family of scientific Web applications for Firefox OS devices.
+to build a family of scientific Web applications compatible with Firefox OS devices.
 Some of the early prototypes created by the Mozilla MathML team are presented
 in this paper.</p>
 </div>
 <div id="p6" class="ltx_para">
 <p class="ltx_p">In a first part, we will review the Web platforms and focus on how the
-technologies can be used for science. We will present the classical features
-as well as more recent improvements that have been integrated in Mozilla
+technologies
+can be used for science. We will present the classical features
+as well as more recent improvements that have been integrated into Mozilla
 projects recently such as the Open Type MATH table, WebGL, Web Components or
 TeXZilla. Some of this work has been made during the crowdfunding project
-“Mathematics in ebooks” which has also resulted in the creation of collection
-of scientific documents using advanced Web technologies <cite class="ltx_cite">[<a href="bib.html#bibx12" title="" class="ltx_ref">Wang1</a>]</cite>.</p>
+“Mathematics in ebooks” which has also resulted in the creation of a collection
+of scientific documents using advanced Web technologies <cite class="ltx_cite">[<a href="bib.html#bibx21" title="" class="ltx_ref">Wang1</a>]</cite>.</p>
 </div>
 <div id="p7" class="ltx_para">
 <p class="ltx_p">In a second
 part, we will study how to use these technologies to write Firefox OS Web apps
-for Science and introduce a few of the tools recently developed by the Mozilla
-MathML team. TODO: list the apps!</p>
+for Science. We will give an overview of the general format, which is
+essentially just an archive of Web pages together with a manifest. We will
+discuss the big picture for a Math Suite and present three Web apps we started
+to develop: a math cheat sheet, a note-taking app for math and finally an app
+to help doing algebraic calculations similar to Epsilonwriter at MathUI’13.</p>
 </div>
 <div id="p8" class="ltx_para">
 <p class="ltx_p">The authors have written this paper using collaboration tools like GitHub and
 all the sources, programs and tools presented here are open. Because
 <a href="http://fred-wang.github.io/MathUI2014/paper/output/MathUI2014-MozillaMathML.pdf" title="" class="ltx_ref">PDF format</a>
 has been requested for submission to the MathUI workshop, we had to provide
-<a href="http://fred-wang.github.io/MathUI2014/demos/" title="" class="ltx_ref">our demos</a> separately instead of integrating them directly in the document.
+<a href="http://fred-wang.github.io/MathUI2014/demos/" title="" class="ltx_ref">our demos</a> separately instead of integrating them directly into the document.
 However, we invite the reader to test the demos in a Gecko browser. A
 <a href="http://fred-wang.github.io/MathUI2014/paper/output/" title="" class="ltx_ref">Web version</a> of that document is also available for online reading.</p>
 </div>
@@ -115,7 +121,7 @@ However, we invite the reader to test the demos in a Gecko browser. A
 <div>
 <a href="." title="Firefox OS Web Apps for Science" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title">Firefox OS Web Apps for Science</span></a><a href="bib.html" title="References ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="S1.html" title="1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>The Web Platform</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Apr 20 17:54:57 2014 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Mon Apr 21 17:00:10 2014 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 </body>

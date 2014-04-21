@@ -1,8 +1,8 @@
 <!DOCTYPE html><html>
 <head>
 <title>1.5 Advanced HTML5 Features‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science</title>
-<!--Generated on Sun Apr 20 17:54:57 2014 by LaTeXML (version 0.7.999_04) http://dlmf.nist.gov/LaTeXML/.-->
-<!--Document created on April 20, 2014.-->
+<!--Generated on Mon Apr 21 17:00:10 2014 by LaTeXML (version 0.7.999_04) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on April 21, 2014.-->
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../output/LaTeXML.css" type="text/css">
@@ -40,14 +40,15 @@ JavaScript. This element may be more convenient than SVG in situations where
 you want to generate schemas dynamically. For example <a href="http://fred-wang.github.io/MathUI2014/demos/5-canvas.html" title="" class="ltx_ref">demos/5-canvas.html</a>
 shows the typical graphs associated to a RLC circuit that are automatically
 updated when the user changes the frequency of the current. It is also possible
-to use WebGL <cite class="ltx_cite">[<a href="bib.html#bibx21" title="" class="ltx_ref">WebGL</a>]</cite>,
+to use WebGL <cite class="ltx_cite">[<a href="bib.html#bibx25" title="" class="ltx_ref">WebGL</a>]</cite>,
 opening the possibility to draw 3D scientific schemas. For example
 <a href="http://www.chemdoodle.com/" title="" class="ltx_ref">chemdoodle</a>
 relies on WebGL to provide 3D representation of chemical structures.</p>
 </div>
 <div id="p2" class="ltx_para">
 <p class="ltx_p">As for SVG, 2D/3D scientific schemas created via the <span class="ltx_text ltx_font_typewriter">&lt;canvas&gt;</span> might
-require mathematical formulas. This is possible since we saw that MathML can be
+require mathematical formulas. This is possible since we saw in section
+<a href="S1.SS2.html" title="1.2 Basic HTML5 Features ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.2</span></a> that MathML can be
 inserted in SVG via a <span class="ltx_text ltx_font_typewriter">&lt;foreignObject&gt;</span> and moreover SVG images can be
 inserted in both the <span class="ltx_text ltx_font_typewriter">CanvasRenderingContext2D</span> and
 <span class="ltx_text ltx_font_typewriter">WebGLRenderingContext</span>. One
@@ -55,21 +56,20 @@ can for example use TeXZilla’s <span class="ltx_text ltx_font_typewriter">toIm
 images dynamically. For instance,
 the page <a href="http://fred-wang.github.io/MathUI2014/demos/6-mathml-in-webgl.html" title="" class="ltx_ref">demos/6-mathml-in-webgl.html</a> shows an
 example of a 3D schemas for the magnetic field of a circular current loop.
-Again, see <cite class="ltx_cite">[<a href="bib.html#bibx12" title="" class="ltx_ref">Wang1</a>]</cite> for more examples.
-</p>
+Again, see <cite class="ltx_cite">[<a href="bib.html#bibx21" title="" class="ltx_ref">Wang1</a>]</cite> for more examples.</p>
 </div>
 <div id="p3" class="ltx_para">
 <p class="ltx_p">One of the recent HTML5 features that is currently being implemented in Web
-rendering engines is Web Components <cite class="ltx_cite">[<a href="bib.html#bibx22" title="" class="ltx_ref">WebComponents</a>]</cite>.
+rendering engines is Web Components <cite class="ltx_cite">[<a href="bib.html#bibx24" title="" class="ltx_ref">WebComponents</a>]</cite>.
 The idea is to allow Web developers to
 create their own custom HTML elements. These elements are made of the so-called
 shadow tree, which is an “internal” representation from basic elements and CSS
 style to which we attach some behaviors with DOM events and Javascript. This is
 typically useful to create some reusable widgets. Mozilla’s Brick project
-is a collection of such elements with demos <cite class="ltx_cite">[<a href="bib.html#bibx6" title="" class="ltx_ref">Moz5</a>]</cite>.
+is a collection of such elements and contains many demos <cite class="ltx_cite">[<a href="bib.html#bibx12" title="" class="ltx_ref">Moz5</a>]</cite>.
 Web Components are currently
 not fully implemented natively in browsers but some polyfill libraries like
-X-Tag allows to emulate their behavior <cite class="ltx_cite">[<a href="bib.html#bibx7" title="" class="ltx_ref">Moz6</a>]</cite>.</p>
+X-Tag allows to emulate their behavior <cite class="ltx_cite">[<a href="bib.html#bibx13" title="" class="ltx_ref">Moz6</a>]</cite>.</p>
 </div>
 <div id="p4" class="ltx_para">
 <p class="ltx_p">Web components can obviously be very helpful to design user inteface for
@@ -77,7 +77,7 @@ sciencific Web app. For example, the specific interactive drawing of
 <a href="http://fred-wang.github.io/MathUI2014/demos/5-canvas.html" title="" class="ltx_ref">demos/5-canvas.html</a> for RLC circuits could become a generic widget
 <span class="ltx_text ltx_font_typewriter">&lt;x-graph&gt;</span> to draw scientific graphs with some user interface to
 configure the curve parameters. As a proof-of-concept, we have used the X-Tag
-library to create a custom <span class="ltx_text ltx_font_typewriter">&lt;x-tex&gt;</span> tag. The behavior is simple
+library to create a custom <span class="ltx_text ltx_font_typewriter">&lt;x-tex&gt;</span> tag. The behavior is simply to
 automatically converts its LaTeX content into MathML using TeXZilla, see
 <a href="http://fred-wang.github.io/MathUI2014/demos/7-web-component.html" title="" class="ltx_ref">demos/7-web-component.html</a>.
 The Mozilla MathML team is following the developments in Web components and
@@ -90,7 +90,7 @@ developers can reuse them.</p>
 <div>
 <a href="S1.SS4.html" title="1.4 TeXZilla ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4 </span>TeXZilla</span></a><a href="bib.html" title="References ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="S2.html" title="2 Firefox OS ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Firefox OS</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Apr 20 17:54:57 2014 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Mon Apr 21 17:00:10 2014 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 </body>
