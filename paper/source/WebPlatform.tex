@@ -48,7 +48,7 @@ We will also use this property in section \ref{sec:advanced}
 when we introduce {\tt <canvas>}.
 See \href{http://fred-wang.github.io/MathUI2014/demos/2-mathml-in-svg.svg}{demos/2-mathml-in-svg.svg} for an example of a SVG schema with
 MathML equations inside. Again, some authoring tools exist to help generating
-such schemas.
+such schemas such as LaTeXML \cite{LaTeXML}.
 
 \href{http://fred-wang.github.io/MathUI2014/demos/3-mathml-javascript.html}{demos/3-mathml-javascript.html} is a small example of an
 interactive MathML formula. Javascript is used to allow the user to highlight
@@ -95,7 +95,7 @@ In order to solve that problem, we have started to implement the
 OpenType MATH table, which is currently undergoing
 standardization at the MPEG group \cite{OpenTypeMATHtable}.
 We have started to use this table in order to provide a generic
-support for MATH fonts. 
+support for MATH fonts and a partial support is available in Firefox 31.
 Note that MathML does not specify a precise way to render mathematical formulas
 and leave the details to the implementers. Relying on the MATH table will give
 more control to professional font designers.
@@ -122,18 +122,18 @@ In a nutshell, the main features are:
 
 There are various mathematical fonts with an OpenType MATH table available and
 most of them are distributed with a TeXLive distribution. Windows and Mac
-systems have respectively Cambria Math and STIX installed by default. We have also
-experimented with PackageKit auto-installation on Linux. This means that
-missing appropriate fonts will become very unlikely on Desktop. We also have
-plans to make these fonts preinstalled on Firefox OS
-\cite{BugzillaFirefoxOSFonts}. In any case, fallback
-downloadable Web fonts can also be used.
+systems have respectively Cambria Math and STIX installed by default.
+We have also
+experimented with PackageKit auto-installation on Linux,
+we plan to install math fonts on Firefox OS and tried
+other another auto-installation method for Android.
+In any case, fallback downloadable Web fonts can also be used. This means that
+missing mathematical fonts will become very unlikely in the future.
 
 The page \href{http://fred-wang.github.io/MathUI2014/demos/4-mathml-fonts.html}{demos/4-mathml-fonts.html} shows how to get various font style for
 a document: Asana, TeX Gyre Bonum, TeX Gyre Pagella, TeX Gyre Termes,
-Latin Modern, Neo Euler and XITS. At the moment, it will not work correctly
-without a Nightly version of Gecko and some additional patches but we expect
-that this work will be integrated into future Gecko releases.
+Latin Modern, Neo Euler and XITS. You need a browser with Gecko 31 or higher
+in order to see the appropriate rendering.
 
 \subsection{TeXZilla}
 \label{sec:texzilla}
@@ -189,7 +189,7 @@ opening the possibility to draw 3D scientific schemas. For example
 \href{http://www.chemdoodle.com/}{chemdoodle}
 relies on WebGL to provide 3D representation of chemical structures.
 
-As for SVG, 2D/3D scientific schemas created via the {\tt <canvas>} might
+Similarly to SVG, 2D/3D scientific schemas created via the {\tt <canvas>} might
 require mathematical formulas. This is possible since we saw in section
 \ref{sec:basic} that MathML can be
 inserted in SVG via a {\tt <foreignObject>} and moreover SVG images can be
