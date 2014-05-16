@@ -83,7 +83,7 @@ As seen in section \ref{sec:basic}, one can use CSS the standard way to apply
 specific styles to mathematical equations. However, perhaps the most important
 style that scientists and publishers want is the rendering with a given
 mathematical font. Gecko has always used TeX heuristics to position scripts,
-fractions, roots etc but these rules do not necessarily work well for other
+fractions, roots, etc. but these rules do not necessarily work well for other
 fonts than Knuth's Computer Modern. Moreover, in order to draw stretchy and
 large operators the MathML code requires to pick and assembly specific glyphs
 from math fonts. So far, Gecko only knows a limited set of Unicode constructions
@@ -107,7 +107,7 @@ In a nutshell, the main features are:
   we implemented the "ssty" feature to adjust the size of glyphs like primes
   when they are used as scripts.
 
-\item Font parameters to define precisely the gaps, shifts, kerning etc of
+\item Font parameters to define precisely the gaps, shifts, kerning, etc. of
   mathematical objects. Most of them are extensions to the TeX rules so it
   is easy to integrate them into our MathML rendering engine.
 
