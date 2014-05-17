@@ -60,7 +60,7 @@ This example is taken from \cite{MathInEbooks} which contains
 many other examples of this type.
 
 To conclude this review, we briefly mention classical Web features like
-Unicode characters, complex text layout (e.g. ligatures),
+Unicode characters, complex text layout (e.g. kerning, ligatures),
 right-to-left directionality, copy and paste, automatic line breaking and
 accessibility to users with disabilities.
 In general, all these features are well handled by Web languages and rendering
@@ -83,7 +83,7 @@ As seen in section \ref{sec:basic}, one can use CSS the standard way to apply
 specific styles to mathematical equations. However, perhaps the most important
 style that scientists and publishers want is the rendering with a given
 mathematical font. Gecko has always used TeX heuristics to position scripts,
-fractions, roots etc but these rules do not necessarily work well for other
+fractions, roots, etc. but these rules do not necessarily work well for other
 fonts than Knuth's Computer Modern. Moreover, in order to draw stretchy and
 large operators the MathML code requires to pick and assembly specific glyphs
 from math fonts. So far, Gecko only knows a limited set of Unicode constructions
@@ -107,7 +107,7 @@ In a nutshell, the main features are:
   we implemented the "ssty" feature to adjust the size of glyphs like primes
   when they are used as scripts.
 
-\item Font parameters to define precisely the gaps, shifts, kerning etc of
+\item Font parameters to define precisely the gaps, shifts, kerning, etc. of
   mathematical objects. Most of them are extensions to the TeX rules so it
   is easy to integrate them into our MathML rendering engine.
 
@@ -169,7 +169,7 @@ TeXZilla can work in any CommonJS program, in Web pages, as a command line
 program or as a Web server. We have submitted a \href{https://addons.mozilla.org/en-US/firefox/addon/texzilla/}{Firefox add-on}
 that has been approved by the reviewers. We have also already integrated it into
 various other Mozilla tools: in CKEditor for the Mozilla Developer Network,
-in the Seamonkey/Thunderbird composers or in a Firefox OS webapp
+in the Seamonkey/Thunderbird composers or in a Firefox OS web app
 (see section \ref{sec:texzillapp}).
 Finally, a prototype {\tt <x-tex>} custom element is also available
 (see section \ref{sec:advanced}).
