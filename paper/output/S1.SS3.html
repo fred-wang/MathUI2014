@@ -1,8 +1,8 @@
 <!DOCTYPE html><html>
 <head>
 <title>1.3 Styling of Mathematics‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science</title>
-<!--Generated on Sat May 17 12:19:11 2014 by LaTeXML (version 0.8.0) http://dlmf.nist.gov/LaTeXML/.-->
-<!--Document created on May 17, 2014.-->
+<!--Generated on Tue Jun 10 10:36:27 2014 by LaTeXML (version 0.8.0) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on June 10, 2014.-->
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../output/LaTeXML.css" type="text/css">
@@ -21,6 +21,8 @@
 <link rel="section" href="S2.html" title="2 Firefox OS ‣ Firefox OS Web Apps for Science">
 <link rel="section" href="Sx2.html" title="Conclusion ‣ Firefox OS Web Apps for Science">
 <link rel="bibliography" href="bib.html" title="References ‣ Firefox OS Web Apps for Science">
+<link rel="appendix" href="A1.html" title="Appendix A The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="appendix" href="A2.html" title="Appendix B Firefox OS Apps ‣ Firefox OS Web Apps for Science">
 </head>
 <body>
 <div class="ltx_page_main">
@@ -29,7 +31,7 @@
 <a href="S1.html" title="1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>The Web Platform</span></a><a href="S1.SS2.html" title="1.2 Basic HTML5 Features ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.2 </span>Basic HTML5 Features</span></a><a href="S1.SS4.html" title="1.4 TeXZilla ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4 </span>TeXZilla</span></a>
 </div></header>
 <div class="ltx_page_content">
-<section class="ltx_subsection">
+<section class="ltx_subsection ltx_authors_1line">
 <h1 class="ltx_title ltx_title_subsection">
 <span class="ltx_tag ltx_tag_subsection">1.3 </span>Styling of Mathematics</h1>
 <div class="ltx_date ltx_role_creation"></div>
@@ -39,18 +41,23 @@
 specific styles to mathematical equations. However, perhaps the most important
 style that scientists and publishers want is the rendering with a given
 mathematical font. Gecko has always used TeX heuristics to position scripts,
-fractions, roots, etc. but these rules do not necessarily work well for other
-fonts than Knuth’s Computer Modern. Moreover, in order to draw stretchy and
+fractions, roots, etc. However, there are many parameters that depend on
+
+<br class="ltx_break">fontdimen parameters and others on built-in rules in TeX’s typesetting
+engines, which are not exposed to a HTML5 rendering engine <span class="ltx_text ltx_font_italic">a priori</span>
+<cite class="ltx_cite">[<a href="bib.html#bibx16" title="" class="ltx_ref">Vieth</a>]</cite>.
+Moreover, in order to draw stretchy and
 large operators the MathML code requires to pick and assembly specific glyphs
 from math fonts. So far, Gecko only knows a limited set of Unicode constructions
 and also has a
-few private per-font tables. This means that without the appropriate
+few private per-font tables. This means that without one of the supported
 fonts installed, the quality of the MathML rendering could be very low.</p>
 </div>
 <div id="p2" class="ltx_para">
 <p class="ltx_p">In order to solve that problem, we have started to implement the
-OpenType MATH table, which is currently undergoing
-standardization at the MPEG group <cite class="ltx_cite">[<a href="bib.html#bibx14" title="" class="ltx_ref">MPEG1</a>]</cite>.
+OpenType MATH table which is currently undergoing
+standardization as ISO/IEC CD 14496-22 “Open Font Format”
+<cite class="ltx_cite">[<a href="bib.html#bibx15" title="" class="ltx_ref">MPEG1</a>]</cite>.
 We have started to use this table in order to provide a generic
 support for MATH fonts and a partial support is available in Firefox 31.
 Note that MathML does not specify a precise way to render mathematical formulas
@@ -88,7 +95,8 @@ italic corrections.</p>
 <div id="I1.i4.p1" class="ltx_para">
 <p class="ltx_p">A table to draw stretchy and large operators such as parenthesis,
 radicals or summation symbols. We have started to use that table for our
-operator stretching code.</p>
+operator stretching code.
+</p>
 </div>
 </li>
 </ol>
@@ -98,7 +106,7 @@ operator stretching code.</p>
 most of them are distributed with a TeX Live distribution. Windows and Mac
 systems have respectively Cambria Math and STIX installed by default.
 We have also
-experimented with PackageKit auto-installation on Linux,
+experimented with PackageKit auto-installation on Linux <cite class="ltx_cite">[<a href="bib.html#bibx20" title="" class="ltx_ref">PackageKit</a>]</cite>,
 we plan to install math fonts on Firefox OS and tried
 other another auto-installation method for Android.
 In any case, fallback downloadable Web fonts can also be used. This means that
@@ -116,7 +124,7 @@ in order to see the appropriate rendering.</p>
 <div>
 <a href="S1.SS2.html" title="1.2 Basic HTML5 Features ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.2 </span>Basic HTML5 Features</span></a><a href="bib.html" title="References ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="S1.SS4.html" title="1.4 TeXZilla ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4 </span>TeXZilla</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sat May 17 12:19:11 2014 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+<div class="ltx_page_logo">Generated  on Tue Jun 10 10:36:27 2014 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
 </div></footer>
 </div>
 </body>
