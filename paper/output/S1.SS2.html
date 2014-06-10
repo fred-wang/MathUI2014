@@ -1,0 +1,109 @@
+<!DOCTYPE html><html>
+<head>
+<title>1.2 Basic HTML5 Features‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science</title>
+<!--Generated on Sat May 17 12:19:11 2014 by LaTeXML (version 0.8.0) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on May 17, 2014.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../output/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="../output/ltx-article.css" type="text/css">
+<link rel="up" href="S1.html" title="1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="up up" href="." title="Firefox OS Web Apps for Science">
+<link rel="start" href="." title="Firefox OS Web Apps for Science">
+<link rel="prev" href="S1.SS1.html" title="1.1 Overview ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="next" href="S1.SS3.html" title="1.3 Styling of Mathematics ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="subsection" href="S1.SS1.html" title="1.1 Overview ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="subsection" href="S1.SS3.html" title="1.3 Styling of Mathematics ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="subsection" href="S1.SS4.html" title="1.4 TeXZilla ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="subsection" href="S1.SS5.html" title="1.5 Advanced HTML5 Features ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="section" href="Sx1.html" title="Introduction ‣ Firefox OS Web Apps for Science">
+<link rel="section" href="S1.html" title="1 The Web Platform ‣ Firefox OS Web Apps for Science">
+<link rel="section" href="S2.html" title="2 Firefox OS ‣ Firefox OS Web Apps for Science">
+<link rel="section" href="Sx2.html" title="Conclusion ‣ Firefox OS Web Apps for Science">
+<link rel="bibliography" href="bib.html" title="References ‣ Firefox OS Web Apps for Science">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div>
+<a href="S1.html" title="1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>The Web Platform</span></a><a href="S1.SS1.html" title="1.1 Overview ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.1 </span>Overview</span></a><a href="S1.SS3.html" title="1.3 Styling of Mathematics ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.3 </span>Styling of Mathematics</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_subsection">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span>Basic HTML5 Features</h1>
+<div class="ltx_date ltx_role_creation"></div>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">The main language is HTML5, which allows to create pages with headers,
+paragraphs, tables, hyperlinks, etc. The well-known CSS language is used to
+apply specific style to HTML5 and is powerful enough to produce advanced
+designs. Finally, DOM/Javascript provides a programming language and enables
+interactive documents and complex user interfaces. New HTML5 elements
+gives other possibilities. For example the document
+<span class="ltx_text ltx_font_typewriter">pendulum-20131125</span> of <cite class="ltx_cite">[<a href="bib.html#bibx22" title="" class="ltx_ref">Wang1</a>]</cite> uses the
+the <span class="ltx_text ltx_font_typewriter">&lt;video&gt;</span> tag to insert some sequences of a physics lecture.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">For scientific documents, we need two other features: creating graphs, schemas,
+diagrams, etc. and writing mathematical formulas. For the former, simple PNG
+images might be enough. However, Web rendering engines also support the SVG
+language to let authors write scalable images using some simple drawing
+primitives. Many programs are available to generate scientific schemas in SVG
+formats. Mathematical equations can be viewed as an extension of text layout
+and thus requires a good integration within HTML as done by
+Gecko’s native MathML. The document <a href="http://fred-wang.github.io/MathUI2014/demos/1-mathml-in-html.html" title="" class="ltx_ref">demos/1-mathml-in-html.html</a> shows how
+various font properties apply to MathML text via CSS, the good alignment
+of inline equations and its scalability.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">One of the nice feature introduced some years ago in Gecko is the possibility
+to integrate MathML equations inside SVG images via the <span class="ltx_text ltx_font_typewriter">&lt;foreignObject&gt;</span>
+element. People can then create
+scientific schemas with mathematical equations.
+We will also use this property in section <a href="S1.SS5.html" title="1.5 Advanced HTML5 Features ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.5</span></a>
+when we introduce <span class="ltx_text ltx_font_typewriter">&lt;canvas&gt;</span>.
+See <a href="http://fred-wang.github.io/MathUI2014/demos/2-mathml-in-svg.svg" title="" class="ltx_ref">demos/2-mathml-in-svg.svg</a> for an example of a SVG schema with
+MathML equations inside. Again, some authoring tools exist to help generating
+such schemas such as LaTeXML <cite class="ltx_cite">[<a href="bib.html#bibx27" title="" class="ltx_ref">LaTeXML</a>]</cite>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><a href="http://fred-wang.github.io/MathUI2014/demos/3-mathml-javascript.html" title="" class="ltx_ref">demos/3-mathml-javascript.html</a> is a small example of an
+interactive MathML formula. Javascript is used to allow the user to highlight
+parts of a 3-dimensional determinant and understand each term of the
+Sarrus’ rule. Note that no particular Javascript API is needed, one only
+modifies the MathML tree via the standard DOM interface and the rendering
+is automatically updated.
+This example is taken from <cite class="ltx_cite">[<a href="bib.html#bibx22" title="" class="ltx_ref">Wang1</a>]</cite> which contains
+many other examples of this type.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">To conclude this review, we briefly mention classical Web features like
+Unicode characters, complex text layout (e.g. kerning, ligatures),
+right-to-left directionality, copy and paste, automatic line breaking and
+accessibility to users with disabilities.
+In general, all these features are well handled by Web languages and rendering
+engines. The two first works well in Gecko’s MathML
+too and right-to-left MathML was also implemented four years ago
+<cite class="ltx_cite">[<a href="bib.html#bibx2" title="" class="ltx_ref">Bugzilla534963</a>]</cite>.
+For the fourth one, we have proposed a
+<a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-copy/" title="" class="ltx_ref">MathML Copy add-on</a> for Firefox as a temporary solution to
+<cite class="ltx_cite">[<a href="bib.html#bibx3" title="" class="ltx_ref">Bugzilla539506</a>]</cite>. MathML line breaking <cite class="ltx_cite">[<a href="bib.html#bibx1" title="" class="ltx_ref">Bugzilla534962</a>]</cite>
+is very important
+for small screens but to our knowledge, no CSS-compatible implementations exist.
+Finally, Mozilla’s intern Jonathan Wei has started some work on MathML
+accessibility in Gecko <cite class="ltx_cite">[<a href="bib.html#bibx4" title="" class="ltx_ref">Bugzilla916419</a>]</cite> <cite class="ltx_cite">[<a href="bib.html#bibx13" title="" class="ltx_ref">Moz7</a>]</cite>.
+We expect to see improvements to these three last points in order to get a
+complete Web platform for mathematical user interfaces.</p>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="S1.SS1.html" title="1.1 Overview ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.1 </span>Overview</span></a><a href="bib.html" title="References ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="S1.SS3.html" title="1.3 Styling of Mathematics ‣ 1 The Web Platform ‣ Firefox OS Web Apps for Science" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.3 </span>Styling of Mathematics</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat May 17 12:19:11 2014 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
