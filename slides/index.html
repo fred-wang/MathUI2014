@@ -12,7 +12,7 @@
 -->
 <head>
   <meta charset="UTF-8">
-  <title>MathUI 2014 - FirefoxOS Web Apps for Science</title>
+  <title>MathUI 2014 - Firefox OS Web Apps for Science</title>
 <!-- 
   If you upload your slides to the web, ensure that you have 
   a good title - this shows up in search results and social
@@ -23,7 +23,7 @@
 </head>
 <body class="list">
   <header class="caption">
-    <h1>FirefoxOS Web Apps for Science</h1>
+    <h1>Firefox OS Web Apps for Science</h1>
     <p class="footer">
       Raniere Silva and Frédéric Wang, 
       <a href="mailto:dev-tech-mathml@lists.mozilla.org">dev-tech-mathml@lists.mozilla.org</a>
@@ -37,636 +37,724 @@
     </p>
   </aside>
 
-<!-- 
-    Simply copy the whole block for each slide you want.
-  Special slides get extra classes. Each slide needs an ID 
-  to allow for bookmarking and target jumping.
--->
-
   <div id="cover" class="slide"><div>
     <section>
       <header>
-        <h2></h2>
+        <h2>Firefox OS Web Apps for Science</h2>
       </header>
-      <img src="pictures/templatedemos/high-five.jpg" 
-           class="middle shadow" height="400"
-           alt="High-five at the Mozilla Festival!">
+      <img class="middle" alt="Phone Mathzilla"
+           height="70%" 
+           src="pictures/phone-mathzilla.png"/>
       <small class="byline">
-        {Firstname}, {Lastname}, {Conference}, {Location}, {date}
+        Raniere Silva and Frédéric Wang, MathUI2014, Coimbra, July 10th 2014
       </small>
-      <footer class="notes">
-        This is a simple cover slide with an image in the middle
+      <footer class="notes">Not a typical MathUI research paper but overview of
+        Mozilla technologies that could be used for math UI.
+        Presentation focused on Firefox OS.
       </footer>
     </section>
   </div></div>
 
-<!-- end slide block -->
-
-  <div class="slide"><div>
+  <div id="MathMLProject" class="slide"><div>
     <section>
       <header>
-        <h2>Classical HTML5 Features</h2>
+        <h2>Mozilla MathML Project</h2>
       </header>
-    </section>
-  </div></div>  
-
-
-  <div id="callout" class="slide"><div>
-    <section>
-      <header>
-        <h2>MathML</h2>
-      </header>
-      <p>The following are callout slide styles – either a large word, or a one sentence headline. Use them to chunk your presentation into logical units.</p>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>  
-
-  <div id="shout" class="slide shout"><div>
-    <section>
-      <header>
-        <h2>Shout slide</h2>
-      </header>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>  
-
-  <div id="oneline" class="slide oneline"><div>
-    <section>
-      <header>
-        <h2><strong>Imagine</strong>: One line slide</h2>
-      </header>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>  
-
-  <div id="imagesinfo" class="slide"><div>
-    <section>
-      <header>
-        <h2>Image slide styles</h2>
-      </header>
-      <ul>
-        <li>Images are either backgrounds or part of the page.</li>
-        <li>Background images need a "cover" class on on the slide DIV.</li>
-        <li>In-page images need a class of "middle" to get centered</li>
-        <li>Adding "left" or "right" classes floats the image and you can use text next to them</li>
-        <li>Adding a "shadow" class adds a drop-shadow.</li>
-        <li>FIGURE elements around the image allow for a "swinging frame" effect</li>
-        <li>Images can also be videos or SVG. :)</li>
-      </ul>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>
-
-  <div id="imageh" class="slide cover w"><div>
-    <section>
-      <header>
-        <h2>Image slide (stretched horizontal)</h2>
-      </header>
-      <img src="pictures/templatedemos/phones.jpg" 
+      <img src="pictures/m18-cd.png" 
            class="middle" 
-           alt="Firefox OS phones">
+           height="60%" 
+           alt="Mozilla Milestone 18 with MathML support">
       <small class="credits">
-        <a href="http://www.flickr.com/photos/codepo8/9506545800/">
-          Image by Chris Heilmann
-        </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/Updates/The_First_International_MathML_Conference_%28October_2000%29#Report_on_the_International_MathML_and_Math_on_the_Web_Conference_2000">
+          Mozilla CD at the 1st MathML Conference (October 2000)</a>
       </small>
-      <footer class="notes">
-      </footer>
+      <footer class="notes">Volunteer team: Raniere, Fred and others.<br/>
+        Work done: Gecko and Web developments for science.</footer>
     </section>
   </div></div>
 
-  <div id="imagev" class="slide cover h"><div>
+  <div id="FirefoxOS" class="slide"><div>
     <section>
       <header>
-        <h2>Image slide (stretched vertical)</h2>
+        <h2>Firefox OS</h2>
       </header>
-      <img src="pictures/templatedemos/phones.jpg" 
-           class="middle" 
-           alt="Firefox OS phones">
-      <small class="credits">
-        <a href="http://www.flickr.com/photos/codepo8/9506545800/">
-          Image by Chris Heilmann
-        </a>
-      </small>
-      <footer class="notes">
-        Introduce yourself, who you are and why you are the person to give that talk
-      </footer>
-    </section>
-  </div></div>
-
-  <div id="imagemiddle" class="slide"><div>
-    <section>
-      <header>
-        <h2>Image slide (centered, resized)</h2>
-      </header>
-      <img src="pictures/templatedemos/smallphones.jpg" 
+      <img src="pictures/mozillaoverview/redpanda.jpg" 
            class="middle"
-           alt="Firefox OS phones">
+           alt="Red Panda">
+      <footer class="notes">Based on Free Software and Open Web technologies.
+        <br/>
+        Gecko as the Web rendering engine and so MathML support.
+      </footer>
       <small class="credits">
-        <a href="http://www.flickr.com/photos/codepo8/9506545800/">
-          Image by Chris Heilmann
-        </a>
+        <a href="http://www.flickr.com/photos/yortw/5798336827/">Photo by Yortw</a>
       </small>
-      <footer class="notes">
-        Introduce yourself, who you are and why you are the person to give that talk
-      </footer>
     </section>
   </div></div>
 
-  <div id="imageright" class="slide"><div>
+ <div id="basicHTML5" class="slide"><div>
     <section>
       <header>
-        <h2>Image slide (right)</h2>
-      </header>
-      <img src="pictures/templatedemos/smallphones.jpg" 
-           class="right" 
-           alt="Firefox OS phones">
-
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-      </ul>     
-
-      <small class="credits">
-        <a href="http://www.flickr.com/photos/codepo8/9506545800/">
-          Image by Chris Heilmann
-        </a>
-      </small>
-      <footer class="notes">
-        Introduce yourself, who you are and why you are the person to give that talk
-      </footer>
-    </section>
-  </div></div>
-
-  <div id="imageleft" class="slide"><div>
-    <section>
-      <header>
-        <h2>Image slide (left)</h2>
-      </header>
-      <img src="pictures/templatedemos/smallphones.jpg" 
-           class="left" 
-           alt="Firefox OS phones">
-
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-      </ul>     
-
-      <small class="credits">
-        <a href="http://www.flickr.com/photos/codepo8/9506545800/">
-          Image by Chris Heilmann
-        </a>
-      </small>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>
-
-  <div id="imageshadow" class="slide"><div>
-    <section>
-      <header>
-        <h2>Image slide (centered, shadow)</h2>
-      </header>
-      <img src="pictures/templatedemos/smallphones.jpg" 
-           class="middle shadow"
-           alt="Firefox OS phones">
-      <small class="credits">
-        <a href="http://www.flickr.com/photos/codepo8/9506545800/">
-          Image by Chris Heilmann
-        </a>
-      </small>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>
-
-  <div id="imageframe" class="slide"><div>
-    <section>
-      <header>
-        <h2>Image slide (framed)</h2>
-      </header>
-      <figure class="middle shadow frame">
-      <img src="pictures/templatedemos/smallphones.jpg" 
-           alt="Firefox OS phones">
-      </figure>     
-      <small class="credits">
-        <a href="http://www.flickr.com/photos/codepo8/9506545800/">
-          Image by Chris Heilmann
-        </a>
-      </small>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>
-
-  <div id="imageswing" class="slide"><div>
-    <section>
-      <header>
-        <h2>Image slide (framed, swinging)</h2>
-      </header>
-      <figure class="middle shadow frame swing">
-      <img src="pictures/templatedemos/smallphones.jpg" 
-           alt="Firefox OS phones">
-      </figure>     
-      <small class="credits">
-        <a href="http://www.flickr.com/photos/codepo8/9506545800/">
-          Image by Chris Heilmann
-        </a>
-      </small>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>
-
-  <div id="imagegif" class="slide"><div>
-    <section>
-      <header>
-        <h2>Image slide (GIF)</h2>
-      </header>
-      <img src="pictures/templatedemos/earthphases.gif" 
-           alt="Earthphases" class="right" width="300">
-      <p>GIFs animate from the start when the slide shows.</p>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>
-
-  <div id="videoswing" class="slide"><div>
-    <section>
-      <header>
-        <h2>Image slide (video)</h2>
-      </header>
-      <video controls class="middle shadow">
-        <source src="pictures/templatedemos/wave.mp4" type="video/mp4"></source>
-        <source src="pictures/templatedemos/wave.webm" type="video/webm"></source>
-      </video>
-      <small class="credits">
-        <a href="http://www.flickr.com/photos/codepo8/9506545800/">
-          Image by Chris Heilmann
-        </a>
-      </small>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>
-
-  <div id="videoautoplay" class="slide autoplay"><div>
-    <section>
-      <header>
-        <h2>Image slide (video autoplay)</h2>
-      </header>
-      <video controls class="middle shadow">
-        <source src="pictures/templatedemos/wave.mp4" type="video/mp4"></source>
-        <source src="pictures/templatedemos/wave.webm" type="video/webm"></source>
-      </video>
-      <small class="credits">
-        <a href="http://www.flickr.com/photos/codepo8/9506545800/">
-          Image by Chris Heilmann
-        </a>
-      </small>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>
-
-
-  <div id="listtypes" class="slide"><div>
-    <section>
-      <header>
-        <h2>List style types</h2>
-      </header>
-      <p>The following are the different kinds of list styles available to you. <strong>Always remember that bullets kill</strong> – both people and audiences. If people can read ahead of your narrative, they will. And you made yourself redundant as a speaker.</p>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>
-
-  <div id="numbered" class="slide"><div>
-    <section>
-      <header>
-        <h2>Numbered list</h2>
-      </header>
-      <ol>
-        <li>Collect underpants</li>
-        <li>???</li>
-        <li>Profit</li>
-      </ol>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>
-
- <div id="list" class="slide"><div>
-    <section>
-      <header>
-        <h2>Unordered List</h2>
+        <h2>Basic HTML5 Features</h2>
       </header>
       <ul>
-        <li>Tigers</li>
-        <li>Elephants</li>
-        <li>Bears
-          <ul>
-            <li>Koalas</li>
-            <li>Polar</li>
-            <li>Panda</li>
-          </ul>
-        </li>
-        <li>Oh my&hellip;</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>SVG</li>
+        <li>MathML</li>
+        <li>Javascript</li>
+        <li>Text Layout</li>
       </ul>
-      <footer class="notes">
+      <div style="float: right; position: relative; top: -50%">
+        <img src="../demos/2-mathml-in-svg.svg" alt="MathML in SVG"
+             width="400px"/>
+      </div>
+      <div style="clear: both;"/>
+      <footer class="notes">Recall briefly the classical Web technologies that
+        are well supported by Gecko and that they can be mixed together
+        to create scientific documents.
       </footer>
     </section>
   </div></div>
 
- <div id="orderedlist" class="slide"><div>
+  <div id="styling" class="slide"><div>
     <section>
       <header>
-        <h2>Ordered List</h2>
+        <h2>OpenType MATH table</h2>
       </header>
-      <ol>
-        <li>Tigers</li>
-        <li>Elephants</li>
-        <li>Bears
-          <ol>
-            <li>Koalas</li>
-            <li>Polar</li>
-            <li>Panda</li>
-          </ol>
-        </li>
-        <li>Oh my&hellip;</li>
-      </ol>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>
-
- <div id="longlist" class="slide"><div>
-    <section>
-      <header>
-        <h2>Long List</h2>
-      </header>
-      <ol class="longlist">
-        <li>Tigers</li>
-        <li>Elephants</li>
-        <li>Bears
-          <ol>
-            <li>Koalas</li>
-            <li>Polar</li>
-            <li>Panda</li>
-          </ol>
-        </li>
-        <li>Hedgehogs</li>
-        <li>Opossums</li>
-        <li>Hyrax</li>
-        <li>Capybara</li>
-        <li>Oh my&hellip;</li>
-      </ol>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>
-
- <div id="inlinelist" class="slide"><div>
-    <section>
-      <header>
-        <h2>Inline List</h2>
-      </header>
-      <ul class="inline">
-        <li>Tigers</li>
-        <li>Elephants</li>
-        <li>Bears</li>
-        <li>Hedgehogs</li>
-        <li>Opossums</li>
-        <li>Hyrax</li>
-        <li>Capybara</li>
-        <li>Oh my&hellip;</li>
+      <ul style="nobull">
+        <li>Microsoft Word, XeTeX/LuaTeX/ConTeXt, Gecko 31, WebKit Nightly</li>
+        <li>Cambria Math, Latin Modern Math, STIX Math</li>
+        <li>Mathvariant subtable</li>
       </ul>
-      <footer class="notes">moo
-      </footer>
-    </section>
- </div></div>
-
- <div id="animatedlist" class="slide"><div>
-    <section>
-      <header>
-        <h2>Animated List</h2>
-      </header>
-      <ul class="inner">
-        <li class="active">Tigers</li>
-        <li>Elephants</li>
-        <li>Bears</li>
-        <li>Hedgehogs</li>
-        <li>Opossums</li>
-        <li>Hyrax</li>
-        <li>Capybara</li>
-        <li>Oh my&hellip;</li>
-      </ul>
+      <p style="margin: auto; width: 800px;">
+        <iframe
+           width="800px" height="400px" src="mathml-fonts.html">
+        </iframe>
+      </p>
       <footer class="notes">
       </footer>
     </section>
- </div></div>
+  </div></div>  
 
-  <div id="onelinelist" class="slide"><div>
+  <div id="texzilla" class="slide"><div>
     <section>
       <header>
-        <h2>One line list</h2>
+        <h2>TeXZilla</h2>
       </header>
-      <ul class="oneline">
-        <li>Elephants</li>
-        <li>Aardvarks</li>
-        <li>Hedgehogs</li>
-        <li>Kittens</li>
-        <li>Puppies</li>
-      </ul>
+      <p></p>
       <footer class="notes">
       </footer>
     </section>
-  </div></div>
+  </div></div>  
 
-  <div id="reallylonglist" class="slide"><div>
+  <div id="canvas_webgl" class="slide"><div>
     <section>
       <header>
-        <h2>Long list</h2>
+        <h2>Canvas and WebGL</h2>
       </header>
-      <ul class="lots">
-        <li>Elephants</li>
-        <li>Aardvarks</li>
-        <li>Hedgehogs</li>
-        <li>Kittens</li>
-        <li>Puppies</li>
-        <li>Axolotls</li>
-        <li>Elephants</li>
-        <li>Aardvarks</li>
-        <li>Hedgehogs</li>
-        <li>Kittens</li>
-        <li>Puppies</li>
-        <li>Axolotls</li>
-        <li>Elephants</li>
-        <li>Aardvarks</li>
-        <li>Hedgehogs</li>
-        <li>Kittens</li>
-        <li>Puppies</li>
-        <li>Axolotls</li>
-        <li>Elephants</li>
-        <li>Aardvarks</li>
-        <li>Hedgehogs</li>
-        <li>Kittens</li>
-        <li>Puppies</li>
-        <li>Axolotls</li>
-        <li>Elephants</li>
-        <li>Aardvarks</li>
-        <li>Hedgehogs</li>
-        <li>Kittens</li>
-        <li>Puppies</li>
-        <li>Axolotls</li>
-      </ul>
+      <p style="margin: auto; width: 500px;">
+        <iframe
+                width="500px" height="400px" src="mathml-in-webgl.html">
+        </iframe>
+      </p>
       <footer class="notes">
       </footer>
     </section>
-  </div></div>
+  </div></div>  
 
-  <div id="codestyles" class="slide"><div>
+  <div id="web_components" class="slide"><div>
     <section>
       <header>
-        <h2>Code styles</h2>
+        <h2>Web Components</h2>
       </header>
-      <p>Code is not automatically encoded and colour coded. The space you have for code is also limited. This is by design: <strong>presentations are not there to drench audiences with code</strong>. Switch to your editor if needed and link to live, maintained code so people don't copy+paste.</p>
-      <footer class="notes">
-      </footer> 
-    </section>
-  </div></div>
+      <p>
+<pre><code style="font-size: 80%">
+  &lt;x-tex display="block"&gt;
+    \Gamma(t) =
+    \frac{1}{t} \prod_{n=1}^\infty
+    \frac{\left(1+\frac{1}{n}\right)^t}{1+\frac{t}{n}} =
+    \frac{e^{-\gamma t}}{t} \prod_{n=1}^\infty
+    \left(1 + \frac{t}{n}\right)^{-1} e^{\frac{t}{n}}
+  &lt;/x-tex&gt;
+</code></pre>
 
-   <div id="codedemo" class="slide"><div>
-    <section>
-      <header>
-        <h2>code</h2>
-      </header>
-        <pre>
-        <code>var installapp = navigator.mozApps.install(manifestURL);</code>
-        <code>installapp.<mark>onsuccess</mark> = function(data) {</code>
-        <code>  // App is installed</code>
-        <code>};</code>
-        <code>installapp.<mark class="important">onerror</mark> = function() {</code>
-        <code> // App wasn't installed, info is in </code>
-        <code> // installapp.error.name</code>
-        <code>};</code>
-        </pre>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Γ</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mi>t</mi></mfrac><munderover><mo>∏</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mn>∞</mn></munderover><mfrac><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow><mo>)</mo></mrow><mi>t</mi></msup><mrow><mn>1</mn><mo>+</mo><mfrac><mi>t</mi><mi>n</mi></mfrac></mrow></mfrac><mo>=</mo><mfrac><msup><mi>e</mi><mrow><mo>-</mo><mi>γ</mi><mi>t</mi></mrow></msup><mi>t</mi></mfrac><munderover><mo>∏</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mn>∞</mn></munderover><msup><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mi>t</mi><mi>n</mi></mfrac></mrow><mo>)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><msup><mi>e</mi><mfrac><mi>t</mi><mi>n</mi></mfrac></msup></mrow><annotation encoding="TeX">\Gamma(t) = \lim_{n \to \infty} \frac{n! \; n^t}{t \; (t+1)\cdots(t+n)}= \frac{1}{t} \prod_{n=1}^\infty \frac{\left(1+\frac{1}{n}\right)^t}{1+\frac{t}{n}} = \frac{e^{-\gamma t}}{t} \prod_{n=1}^\infty \left(1 + \frac{t}{n}\right)^{-1} e^{\frac{t}{n}}</annotation></semantics></math>
+</p>
       <footer class="notes">
       </footer>
     </section>
-  </div></div>
+  </div></div>  
+<!--   <div id="oneline" class="slide oneline"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2><strong>Imagine</strong>: One line slide</h2> -->
+<!--       </header> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div>   -->
 
-   <div id="markupdemo" class="slide"><div>
-    <section>
-      <header>
-        <h2>Markup is encoded</h2>
-      </header>
-        <pre>
-        <code><p>Paragraph without encode</p></code>
-        <code>&lt;p&gt;Paragraph without encode&lt;/p&gt;</code>
-        <code><!-- for backwards compatibility --></code>
-        </pre>
-      <footer class="notes">
-      </footer>
-    </section>
-  </div></div>
+<!--   <div id="imagesinfo" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Image slide styles</h2> -->
+<!--       </header> -->
+<!--       <ul> -->
+<!--         <li>Images are either backgrounds or part of the page.</li> -->
+<!--         <li>Background images need a "cover" class on on the slide DIV.</li> -->
+<!--         <li>In-page images need a class of "middle" to get centered</li> -->
+<!--         <li>Adding "left" or "right" classes floats the image and you can use text next to them</li> -->
+<!--         <li>Adding a "shadow" class adds a drop-shadow.</li> -->
+<!--         <li>FIGURE elements around the image allow for a "swinging frame" effect</li> -->
+<!--         <li>Images can also be videos or SVG. :)</li> -->
+<!--       </ul> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
 
-  <div id="livecode" class="slide"><div>
-    <section>
-      <header>
-        <h2>Live CSS code</h2>
-      </header>
-      <div id="demodiv"></div>
-<style contenteditable>#demodiv {
-  width: 200px;
-  height: 200px;
-  background: green;
-}</style>
-    <footer class="notes">
-    </footer>
-    </section>
-  </div></div>
+<!--   <div id="imageh" class="slide cover w"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Image slide (stretched horizontal)</h2> -->
+<!--       </header> -->
+<!--       <img src="pictures/templatedemos/phones.jpg"  -->
+<!--            class="middle"  -->
+<!--            alt="Firefox OS phones"> -->
+<!--       <small class="credits"> -->
+<!--         <a href="http://www.flickr.com/photos/codepo8/9506545800/"> -->
+<!--           Image by Chris Heilmann -->
+<!--         </a> -->
+<!--       </small> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
 
-  <div id="smoothlivecode" class="slide"><div>
-    <section>
-      <header>
-        <h2>Live CSS code (smooth)</h2>
-      </header>
-      <div id="demodiv2" class="smoothdemo"></div>
-<style contenteditable>#demodiv2 {
-  width: 200px;
-  height: 200px;
-  background: green;
-}</style>
-    <footer class="notes">
-    </footer>
-    </section>
-  </div></div>
+<!--   <div id="imagev" class="slide cover h"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Image slide (stretched vertical)</h2> -->
+<!--       </header> -->
+<!--       <img src="pictures/templatedemos/phones.jpg"  -->
+<!--            class="middle"  -->
+<!--            alt="Firefox OS phones"> -->
+<!--       <small class="credits"> -->
+<!--         <a href="http://www.flickr.com/photos/codepo8/9506545800/"> -->
+<!--           Image by Chris Heilmann -->
+<!--         </a> -->
+<!--       </small> -->
+<!--       <footer class="notes"> -->
+<!--         Introduce yourself, who you are and why you are the person to give that talk -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
 
-  <div id="quotes" class="slide"><div>
-    <section>
-      <header>
-        <h2>Quote styles</h2>
-      </header>
-      <p>Quotes are a superb way to look clever and get more kudos for being in the know. Make sure you attribute them correctly and do not quote out of context.</p>
-      <footer class="notes">
-      </footer> 
-    </section>
-  </div></div>
+<!--   <div id="imagemiddle" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Image slide (centered, resized)</h2> -->
+<!--       </header> -->
+<!--       <img src="pictures/templatedemos/smallphones.jpg"  -->
+<!--            class="middle" -->
+<!--            alt="Firefox OS phones"> -->
+<!--       <small class="credits"> -->
+<!--         <a href="http://www.flickr.com/photos/codepo8/9506545800/"> -->
+<!--           Image by Chris Heilmann -->
+<!--         </a> -->
+<!--       </small> -->
+<!--       <footer class="notes"> -->
+<!--         Introduce yourself, who you are and why you are the person to give that talk -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
 
-  <div id="simplequote" class="slide"><div>
-    <section>
-      <header>
-        <h2>Quote</h2>
-      </header>
-      <blockquote>
-        <p>The worst part of internet quotes is that you can never be sure that they are attributed correctly.</p>
-        <p class="byline">Benjamin Franklin</p>
-      </blockquote>
-      <footer class="notes">
-      </footer> 
-    </section>
-  </div></div>
+<!--   <div id="imageright" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Image slide (right)</h2> -->
+<!--       </header> -->
+<!--       <img src="pictures/templatedemos/smallphones.jpg"  -->
+<!--            class="right"  -->
+<!--            alt="Firefox OS phones"> -->
 
-  <div id="longquote" class="slide"><div>
-    <section>
-      <header>
-        <h2>Long quote is long&hellip;</h2>
-      </header>
-      <blockquote class="lots">
-        But there's no doubt that, we went for this approach, <mark>we built this internal framework that we called Faceweb</mark>, which is basically this idea that we can take the infrastructure that we built out for pushing code everyday, not having to submit to an app store, building web code on the web stack that we have, and that we can translate that into mobile development. <mark>We just were never able to get the quality of it we wanted</mark>&hellip;
-      </blockquote>
-    <footer class="notes">
-      It seems the main failure was Facebook's approach and internal system creating HTML5 apps - not the technology itself.
-    </footer>
-    </section>
-  </div></div>
+<!--       <ul> -->
+<!--         <li>Item 1</li> -->
+<!--         <li>Item 2</li> -->
+<!--         <li>Item 3</li> -->
+<!--       </ul>      -->
+
+<!--       <small class="credits"> -->
+<!--         <a href="http://www.flickr.com/photos/codepo8/9506545800/"> -->
+<!--           Image by Chris Heilmann -->
+<!--         </a> -->
+<!--       </small> -->
+<!--       <footer class="notes"> -->
+<!--         Introduce yourself, who you are and why you are the person to give that talk -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="imageleft" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Image slide (left)</h2> -->
+<!--       </header> -->
+<!--       <img src="pictures/templatedemos/smallphones.jpg"  -->
+<!--            class="left"  -->
+<!--            alt="Firefox OS phones"> -->
+
+<!--       <ul> -->
+<!--         <li>Item 1</li> -->
+<!--         <li>Item 2</li> -->
+<!--         <li>Item 3</li> -->
+<!--       </ul>      -->
+
+<!--       <small class="credits"> -->
+<!--         <a href="http://www.flickr.com/photos/codepo8/9506545800/"> -->
+<!--           Image by Chris Heilmann -->
+<!--         </a> -->
+<!--       </small> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="imageshadow" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Image slide (centered, shadow)</h2> -->
+<!--       </header> -->
+<!--       <img src="pictures/templatedemos/smallphones.jpg"  -->
+<!--            class="middle shadow" -->
+<!--            alt="Firefox OS phones"> -->
+<!--       <small class="credits"> -->
+<!--         <a href="http://www.flickr.com/photos/codepo8/9506545800/"> -->
+<!--           Image by Chris Heilmann -->
+<!--         </a> -->
+<!--       </small> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="imageframe" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Image slide (framed)</h2> -->
+<!--       </header> -->
+<!--       <figure class="middle shadow frame"> -->
+<!--       <img src="pictures/templatedemos/smallphones.jpg"  -->
+<!--            alt="Firefox OS phones"> -->
+<!--       </figure>      -->
+<!--       <small class="credits"> -->
+<!--         <a href="http://www.flickr.com/photos/codepo8/9506545800/"> -->
+<!--           Image by Chris Heilmann -->
+<!--         </a> -->
+<!--       </small> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="imageswing" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Image slide (framed, swinging)</h2> -->
+<!--       </header> -->
+<!--       <figure class="middle shadow frame swing"> -->
+<!--       <img src="pictures/templatedemos/smallphones.jpg"  -->
+<!--            alt="Firefox OS phones"> -->
+<!--       </figure>      -->
+<!--       <small class="credits"> -->
+<!--         <a href="http://www.flickr.com/photos/codepo8/9506545800/"> -->
+<!--           Image by Chris Heilmann -->
+<!--         </a> -->
+<!--       </small> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="imagegif" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Image slide (GIF)</h2> -->
+<!--       </header> -->
+<!--       <img src="pictures/templatedemos/earthphases.gif"  -->
+<!--            alt="Earthphases" class="right" width="300"> -->
+<!--       <p>GIFs animate from the start when the slide shows.</p> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="videoswing" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Image slide (video)</h2> -->
+<!--       </header> -->
+<!--       <video controls class="middle shadow"> -->
+<!--         <source src="pictures/templatedemos/wave.mp4" type="video/mp4"></source> -->
+<!--         <source src="pictures/templatedemos/wave.webm" type="video/webm"></source> -->
+<!--       </video> -->
+<!--       <small class="credits"> -->
+<!--         <a href="http://www.flickr.com/photos/codepo8/9506545800/"> -->
+<!--           Image by Chris Heilmann -->
+<!--         </a> -->
+<!--       </small> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="videoautoplay" class="slide autoplay"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Image slide (video autoplay)</h2> -->
+<!--       </header> -->
+<!--       <video controls class="middle shadow"> -->
+<!--         <source src="pictures/templatedemos/wave.mp4" type="video/mp4"></source> -->
+<!--         <source src="pictures/templatedemos/wave.webm" type="video/webm"></source> -->
+<!--       </video> -->
+<!--       <small class="credits"> -->
+<!--         <a href="http://www.flickr.com/photos/codepo8/9506545800/"> -->
+<!--           Image by Chris Heilmann -->
+<!--         </a> -->
+<!--       </small> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+
+<!--   <div id="listtypes" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>List style types</h2> -->
+<!--       </header> -->
+<!--       <p>The following are the different kinds of list styles available to you. <strong>Always remember that bullets kill</strong> – both people and audiences. If people can read ahead of your narrative, they will. And you made yourself redundant as a speaker.</p> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="numbered" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Numbered list</h2> -->
+<!--       </header> -->
+<!--       <ol> -->
+<!--         <li>Collect underpants</li> -->
+<!--         <li>???</li> -->
+<!--         <li>Profit</li> -->
+<!--       </ol> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--  <div id="list" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Unordered List</h2> -->
+<!--       </header> -->
+<!--       <ul> -->
+<!--         <li>Tigers</li> -->
+<!--         <li>Elephants</li> -->
+<!--         <li>Bears -->
+<!--           <ul> -->
+<!--             <li>Koalas</li> -->
+<!--             <li>Polar</li> -->
+<!--             <li>Panda</li> -->
+<!--           </ul> -->
+<!--         </li> -->
+<!--         <li>Oh my&hellip;</li> -->
+<!--       </ul> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--  <div id="orderedlist" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Ordered List</h2> -->
+<!--       </header> -->
+<!--       <ol> -->
+<!--         <li>Tigers</li> -->
+<!--         <li>Elephants</li> -->
+<!--         <li>Bears -->
+<!--           <ol> -->
+<!--             <li>Koalas</li> -->
+<!--             <li>Polar</li> -->
+<!--             <li>Panda</li> -->
+<!--           </ol> -->
+<!--         </li> -->
+<!--         <li>Oh my&hellip;</li> -->
+<!--       </ol> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--  <div id="longlist" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Long List</h2> -->
+<!--       </header> -->
+<!--       <ol class="longlist"> -->
+<!--         <li>Tigers</li> -->
+<!--         <li>Elephants</li> -->
+<!--         <li>Bears -->
+<!--           <ol> -->
+<!--             <li>Koalas</li> -->
+<!--             <li>Polar</li> -->
+<!--             <li>Panda</li> -->
+<!--           </ol> -->
+<!--         </li> -->
+<!--         <li>Hedgehogs</li> -->
+<!--         <li>Opossums</li> -->
+<!--         <li>Hyrax</li> -->
+<!--         <li>Capybara</li> -->
+<!--         <li>Oh my&hellip;</li> -->
+<!--       </ol> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--  <div id="inlinelist" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Inline List</h2> -->
+<!--       </header> -->
+<!--       <ul class="inline"> -->
+<!--         <li>Tigers</li> -->
+<!--         <li>Elephants</li> -->
+<!--         <li>Bears</li> -->
+<!--         <li>Hedgehogs</li> -->
+<!--         <li>Opossums</li> -->
+<!--         <li>Hyrax</li> -->
+<!--         <li>Capybara</li> -->
+<!--         <li>Oh my&hellip;</li> -->
+<!--       </ul> -->
+<!--       <footer class="notes">moo -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--  </div></div> -->
+
+<!--  <div id="animatedlist" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Animated List</h2> -->
+<!--       </header> -->
+<!--       <ul class="inner"> -->
+<!--         <li class="active">Tigers</li> -->
+<!--         <li>Elephants</li> -->
+<!--         <li>Bears</li> -->
+<!--         <li>Hedgehogs</li> -->
+<!--         <li>Opossums</li> -->
+<!--         <li>Hyrax</li> -->
+<!--         <li>Capybara</li> -->
+<!--         <li>Oh my&hellip;</li> -->
+<!--       </ul> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--  </div></div> -->
+
+<!--   <div id="onelinelist" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>One line list</h2> -->
+<!--       </header> -->
+<!--       <ul class="oneline"> -->
+<!--         <li>Elephants</li> -->
+<!--         <li>Aardvarks</li> -->
+<!--         <li>Hedgehogs</li> -->
+<!--         <li>Kittens</li> -->
+<!--         <li>Puppies</li> -->
+<!--       </ul> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="reallylonglist" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Long list</h2> -->
+<!--       </header> -->
+<!--       <ul class="lots"> -->
+<!--         <li>Elephants</li> -->
+<!--         <li>Aardvarks</li> -->
+<!--         <li>Hedgehogs</li> -->
+<!--         <li>Kittens</li> -->
+<!--         <li>Puppies</li> -->
+<!--         <li>Axolotls</li> -->
+<!--         <li>Elephants</li> -->
+<!--         <li>Aardvarks</li> -->
+<!--         <li>Hedgehogs</li> -->
+<!--         <li>Kittens</li> -->
+<!--         <li>Puppies</li> -->
+<!--         <li>Axolotls</li> -->
+<!--         <li>Elephants</li> -->
+<!--         <li>Aardvarks</li> -->
+<!--         <li>Hedgehogs</li> -->
+<!--         <li>Kittens</li> -->
+<!--         <li>Puppies</li> -->
+<!--         <li>Axolotls</li> -->
+<!--         <li>Elephants</li> -->
+<!--         <li>Aardvarks</li> -->
+<!--         <li>Hedgehogs</li> -->
+<!--         <li>Kittens</li> -->
+<!--         <li>Puppies</li> -->
+<!--         <li>Axolotls</li> -->
+<!--         <li>Elephants</li> -->
+<!--         <li>Aardvarks</li> -->
+<!--         <li>Hedgehogs</li> -->
+<!--         <li>Kittens</li> -->
+<!--         <li>Puppies</li> -->
+<!--         <li>Axolotls</li> -->
+<!--       </ul> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="codestyles" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Code styles</h2> -->
+<!--       </header> -->
+<!--       <p>Code is not automatically encoded and colour coded. The space you have for code is also limited. This is by design: <strong>presentations are not there to drench audiences with code</strong>. Switch to your editor if needed and link to live, maintained code so people don't copy+paste.</p> -->
+<!--       <footer class="notes"> -->
+<!--       </footer>  -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--    <div id="codedemo" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>code</h2> -->
+<!--       </header> -->
+<!--         <pre> -->
+<!--         <code>var installapp = navigator.mozApps.install(manifestURL);</code> -->
+<!--         <code>installapp.<mark>onsuccess</mark> = function(data) {</code> -->
+<!--         <code>  // App is installed</code> -->
+<!--         <code>};</code> -->
+<!--         <code>installapp.<mark class="important">onerror</mark> = function() {</code> -->
+<!--         <code> // App wasn't installed, info is in </code> -->
+<!--         <code> // installapp.error.name</code> -->
+<!--         <code>};</code> -->
+<!--         </pre> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--    <div id="markupdemo" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Markup is encoded</h2> -->
+<!--       </header> -->
+<!--         <pre> -->
+<!--         <code><p>Paragraph without encode</p></code> -->
+<!--         <code>&lt;p&gt;Paragraph without encode&lt;/p&gt;</code> -->
+<!--         <code><\!-- for backwards compatibility -\-></code> -->
+<!--         </pre> -->
+<!--       <footer class="notes"> -->
+<!--       </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="livecode" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Live CSS code</h2> -->
+<!--       </header> -->
+<!--       <div id="demodiv"></div> -->
+<!-- <style contenteditable>#demodiv { -->
+<!--   width: 200px; -->
+<!--   height: 200px; -->
+<!--   background: green; -->
+<!-- }</style> -->
+<!--     <footer class="notes"> -->
+<!--     </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="smoothlivecode" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Live CSS code (smooth)</h2> -->
+<!--       </header> -->
+<!--       <div id="demodiv2" class="smoothdemo"></div> -->
+<!-- <style contenteditable>#demodiv2 { -->
+<!--   width: 200px; -->
+<!--   height: 200px; -->
+<!--   background: green; -->
+<!-- }</style> -->
+<!--     <footer class="notes"> -->
+<!--     </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="quotes" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Quote styles</h2> -->
+<!--       </header> -->
+<!--       <p>Quotes are a superb way to look clever and get more kudos for being in the know. Make sure you attribute them correctly and do not quote out of context.</p> -->
+<!--       <footer class="notes"> -->
+<!--       </footer>  -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="simplequote" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Quote</h2> -->
+<!--       </header> -->
+<!--       <blockquote> -->
+<!--         <p>The worst part of internet quotes is that you can never be sure that they are attributed correctly.</p> -->
+<!--         <p class="byline">Benjamin Franklin</p> -->
+<!--       </blockquote> -->
+<!--       <footer class="notes"> -->
+<!--       </footer>  -->
+<!--     </section> -->
+<!--   </div></div> -->
+
+<!--   <div id="longquote" class="slide"><div> -->
+<!--     <section> -->
+<!--       <header> -->
+<!--         <h2>Long quote is long&hellip;</h2> -->
+<!--       </header> -->
+<!--       <blockquote class="lots"> -->
+<!--         But there's no doubt that, we went for this approach, <mark>we built this internal framework that we called Faceweb</mark>, which is basically this idea that we can take the infrastructure that we built out for pushing code everyday, not having to submit to an app store, building web code on the web stack that we have, and that we can translate that into mobile development. <mark>We just were never able to get the quality of it we wanted</mark>&hellip; -->
+<!--       </blockquote> -->
+<!--     <footer class="notes"> -->
+<!--       It seems the main failure was Facebook's approach and internal system creating HTML5 apps - not the technology itself. -->
+<!--     </footer> -->
+<!--     </section> -->
+<!--   </div></div> -->
 
   <div id="thanks" class="slide"><div>
     <section>
       <header>
         <h2>Thanks</h2>
       </header>
-      <img src="pictures/mozillaoverview/redpanda.jpg" class="right" alt="Red panda (Firefox)">
+      <img src="pictures/mathzilla.svg" class="right" alt="Mathzilla">
       <ul class="nobull">
-        <li>{name}</li>
-        <li>{title}</li>
-        <li>{<a href="http://twitter.com/">@twitter</a>}</li>
-        <li><strong>Slides</strong>: {slideurl}</li>
+        <li>Raniere Silva and Frédéric Wang</li>
+        <li>Mozilla MathML Project</li>
+        <li><a href="https://github.com/fred-wang/MathUI2014">github.com/fred-wang/MathUI2014</a></li>
+        <li>dev-tech-mathml@lists.mozilla.org</li>
+        <li>irc.mozilla.org #mathml</li>
       </ul>
-      <small class="credits">
-        <a href="http://www.flickr.com/photos/yortw/5798336827/">Photo by Yortw</a>
-      </small>
-
     <footer class="notes">
     </footer>
-
     </section>
   </div></div>
 

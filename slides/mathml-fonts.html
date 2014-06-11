@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+  <head>
+    <title>OpenType MATH Fonts</title>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+      select {
+        color: red;
+        background: transparent;
+      }
+
+      /* Asana Math */
+      @font-face {
+        font-family: 'Asana Math';
+        src: local('Asana-Math-Regular'), local('Asana Math Regular'),
+             url('../demos/webfonts/Asana-Math.woff');
+      }
+      body.Asana, body.Asana mtext, body.Asana select,
+      body.Asana math {
+        font-family: 'Asana Math';
+      }
+
+      /* TeXGyrePagella */
+      @font-face {
+        font-family: 'TeX Gyre Pagella';
+        src: local('TeX-Gyre-Pagella-Regular'),
+             local('TeX Gyre Pagella Regular'),
+             url('../demos/webfonts/texgyrepagella-regular.woff');
+      }
+      @font-face {
+        font-family: 'TeX Gyre Pagella Math';
+        src: local('TeX-Gyre-Pagella-Math-Regular'),
+             local('TeX Gyre Pagella Math Regular'),
+             url('../demos/webfonts/texgyrepagella-math.woff');
+      }
+      body.TeXGyrePagella, body.TeXGyrePagella mtext,
+      body.TeXGyrePagella select {
+        font-family: 'TeX Gyre Pagella';
+      }
+      .TeXGyrePagella math {
+        font-family: 'TeX Gyre Pagella Math';
+      }
+
+      /* LatinModern */
+      @font-face {
+        font-family: 'Latin Modern';
+        src: local('Latin-Modern-Regular'),
+             local('Latin Modern Regular'),
+             url('../demos/webfonts/lmroman12-regular.woff');
+      }
+      @font-face {
+        font-family: 'Latin Modern Math';
+        src: local('Latin-Modern-Math-Regular'),
+             local('Latin Modern Math Regular'),
+             url('../demos/webfonts/latinmodern-math.woff');
+      }
+      body.LatinModern, body.LatinModern mtext, body.LatinModern select {
+        font-family: 'Latin Modern';
+      }
+      body.LatinModern math {
+        font-family: 'Latin Modern Math';
+      }
+
+      /* NeoEuler */
+      @font-face {
+        font-family: 'Neo Euler';
+        src: local('Neo-Euler-Regular'), local('Neo Euler Regular'),
+             url('../demos/webfonts/euler.woff');
+      }
+      body.NeoEuler, body.NeoEuler mtext, body.NeoEuler select,
+      body.NeoEuler math {
+        font-family: 'Neo Euler';
+      }
+    </style>
+    <script type="text/javascript">
+      function updateMathFont()
+      {
+        var mathFont = document.getElementById("MathFont").value;
+        document.body.setAttribute("class", mathFont);
+      }
+      
+      function load()
+      {
+        document.getElementById("MathFont").
+          addEventListener("change", updateMathFont, false)
+        updateMathFont();
+      }
+
+      window.addEventListener("load", load, false);
+    </script>
+  </head>
+  <body  style="text-align: center; font-size: 150%;">
+
+    <p>
+      <select name="MathFont" id="MathFont">
+        <option value="LatinModern">Latin Modern</option>
+        <option value="Asana">Asana</option>
+        <option value="TeXGyrePagella">TeX Gyre Pagella</option>
+        <option value="NeoEuler">Neo Euler</option>
+      </select>
+    </p>
+
+
+<p>We have
+<math displaystyle="true">
+  <mrow>
+    <mrow>
+      <mi>f</mi>
+      <mo>⁢</mo>
+      <mrow>
+        <mo>(</mo>
+        <mi>x</mi>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+    <mo>=</mo>
+    <mrow>
+      <msubsup>
+        <mo symmetric="true" largeop="true">∫</mo>
+        <mrow>
+          <mo>-</mo>
+          <mi mathvariant="normal">∞</mi>
+        </mrow>
+        <mi mathvariant="normal">∞</mi>
+      </msubsup>
+      <mrow>
+        <mover accent="true">
+          <mi>f</mi>
+          <mo stretchy="false">^</mo>
+        </mover>
+        <mo>⁢</mo>
+        <mpadded width="+5.0pt">
+          <mrow>
+            <mo>(</mo>
+            <mi>ξ</mi>
+            <mo>)</mo>
+          </mrow>
+        </mpadded>
+        <mo>⁢</mo>
+        <mpadded width="+1.7pt">
+          <msup>
+            <mi>e</mi>
+            <mrow>
+              <mn>2</mn>
+              <mo>⁢</mo>
+              <mi>π</mi>
+              <mo>⁢</mo>
+              <mi>i</mi>
+              <mo>⁢</mo>
+              <mi>ξ</mi>
+              <mo>⁢</mo>
+              <mi>x</mi>
+            </mrow>
+          </msup>
+        </mpadded>
+        <mo>⁢</mo>
+        <mi>d</mi>
+        <mo>⁢</mo>
+        <mi>ξ</mi>
+      </mrow>
+    </mrow>
+
+
+      <mo>=</mo>
+      <mrow>
+        <munderover>
+          <mo symmetric="true" largeop="true">∑</mo>
+          <mrow>
+            <mi>n</mi>
+            <mo>=</mo>
+            <mrow>
+              <mo>-</mo>
+              <mi mathvariant="normal">∞</mi>
+            </mrow>
+          </mrow>
+          <mi mathvariant="normal">∞</mi>
+        </munderover>
+        <mrow>
+          <mpadded width="+5.0pt">
+            <msub>
+              <mi>c</mi>
+              <mi>n</mi>
+            </msub>
+          </mpadded>
+          <mo>⁢</mo>
+          <msup>
+            <mi>e</mi>
+            <mrow>
+              <mn>2</mn>
+              <mo>⁢</mo>
+              <mi>π</mi>
+              <mo>⁢</mo>
+              <mi>i</mi>
+              <mo>⁢</mo>
+              <mrow>
+                <mo>(</mo>
+                <mrow>
+                  <mi>n</mi>
+                  <mo>/</mo>
+                  <mi>T</mi>
+                </mrow>
+                <mo>)</mo>
+              </mrow>
+              <mo>⁢</mo>
+              <mi>x</mi>
+            </mrow>
+          </msup>
+        </mrow>
+      </mrow>
+  </mrow>
+</math></p>
+</body>
+</html>
