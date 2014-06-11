@@ -5,4 +5,4 @@ This repository contains the paper of the Mozilla MathML project as well as demo
 
 * [Web version of the paper](http://fred-wang.github.io/MathUI2014/paper/output/index.html)
 * [Demos](http://fred-wang.github.io/MathUI2014/demos/)
-* Slides (TODO)
+* [Slide Deck](http://fred-wang.github.io/MathUI2014/slides/)
