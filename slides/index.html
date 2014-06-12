@@ -51,8 +51,8 @@
       <small class="byline">
         Raniere Silva and Frédéric Wang, MathUI2014, Coimbra, July 10th 2014
       </small>
-      <footer class="notes">Not a typical MathUI research paper but overview of
-        Mozilla technologies that could be used for Math UI.
+      <footer class="notes">Overview of Mozilla technologies
+        that could be used for Math UI.
         Presentation focused on Firefox OS.
       </footer>
     </section>
@@ -63,16 +63,28 @@
       <header>
         <h2>Mozilla MathML Project</h2>
       </header>
-      <img src="pictures/m18-cd.png" 
-           class="middle" 
-           height="60%" 
-           alt="Mozilla Milestone 18 with MathML support">
+      <ul>
+        <li>Raniere Silva &amp; Frédéric Wang</li>
+        <li>~10 volunteers</li>
+        <li>15 years anniversary</li>
+        <li>Math formulae and more</li>
+      </ul>
+      <div style="float: right; height: 100%; position: relative;
+                  top: -40%; left: 10%;">
+        <img src="pictures/m18-cd.png" 
+             height="80%"
+             title="Mozilla m18 with MathML &amp; SVG, mozilla.org"
+             alt="Mozilla m18 with MathML &amp; SVG, mozilla.org"/><br/>
+      </div>
       <small class="credits">
         <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/Updates/The_First_International_MathML_Conference_%28October_2000%29">
           Mozilla CD at the 1st MathML Conference (October 2000)</a>
       </small>
-      <footer class="notes">Volunteer team: Raniere, Fred and others.<br/>
-        Work done: Gecko and Web developments for science.</footer>
+      <footer class="notes">
+        We are part of a volunteer team
+        working on Gecko and Web developments for science.
+        <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/Updates/Project_Initiation_%28May_1999%29">Project initiation in May 1999</a>.
+      </footer>
     </section>
   </div></div>
 
@@ -81,15 +93,21 @@
       <header>
         <h2>Firefox OS</h2>
       </header>
-      <div id="cover-foxy">
-        <div id="foxy"></div>
-        <img id="firefox-os-wordmark" src="pictures/firefox-os-wordmark.png"></img>
+      <ul>
+        <li>Mobile devices</li>
+        <li>Open</li>
+        <li>Web technologies</li>
+      </ul>
+      <div style="float: right; position: relative; top: -30%;">
+        <img src="pictures/redpanda.jpg" 
+             alt="Red Panda"/>
       </div>
-      <footer class="notes">Based on Free Software and Open Web technologies.
+      <footer class="notes">Smartphones, tablets, more?<br/>
+        Based on Free Software and Open Web technologies.
         <br/>Gecko as the Web rendering engine and so MathML support.
       </footer>
       <small class="credits">
-        Animation from Mozilla.
+        <a href="http://www.flickr.com/photos/yortw/5798336827/">Photo by Yortw</a>
       </small>
     </section>
   </div></div>
@@ -156,6 +174,8 @@
         <li>Many interfaces: Web page, CommonJS, command-line</li>
         <li>Integration in Mozilla Products</li>
       </ul>
+      <pre style="color: blue; font-size: 90%; font-family: monospace;">س = \frac{-ب \pm \sqrt{ب^٢ - ٤اج}}{٢ا}</pre>
+      <p><math display="block" dir="rtl" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>س</mi><mo>=</mo><mfrac><mrow><mo>-</mo><mi>ب</mi><mo>±</mo><msqrt><mrow><msup><mi>ب</mi><mn>٢</mn></msup><mo>-</mo><mn>٤</mn><mi>ا</mi><mi>ج</mi></mrow></msqrt></mrow><mrow><mn>٢</mn><mi>ا</mi></mrow></mfrac></mrow><annotation encoding="TeX">س = \frac{-ب\pm\sqrt{ب^٢-٤اج}}{٢ا}</annotation></semantics></math></p>
       <footer class="notes">
         Javascript, itex2MML grammar, unicode.xml file from W3C<br/>
         i18n: Unicode and RTL support<br/>
@@ -268,6 +288,10 @@
 }
         </code>
       </pre>
+      <div id="cover-foxy">
+        <div id="foxy"></div>
+        <img id="firefox-os-wordmark" src="pictures/firefox-os-wordmark.png"></img>
+      </div>
       <footer class="notes">Example of manifest.</footer>
     </section>
   </div></div>

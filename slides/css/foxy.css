@@ -1,7 +1,9 @@
 #cover-foxy {
     background: #0097de;
     width: 156px;
-    margin: 0 40%;
+    margin: 0 0;
+    position: relative; top: -70%;
+    float: right;
 }
 #foxy {
     animation: animate-tail 3.75s steps(44) infinite;
