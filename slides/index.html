@@ -20,6 +20,9 @@
  -->
   <meta name="viewport" content="width=device-width, user-scalable=yes">
   <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+
+  <!-- Foxy -->
+  <link rel="stylesheet" href="css/foxy.css">
 </head>
 <body class="list">
   <header class="caption">
@@ -48,8 +51,8 @@
       <small class="byline">
         Raniere Silva and Frédéric Wang, MathUI2014, Coimbra, July 10th 2014
       </small>
-      <footer class="notes">Not a typical MathUI research paper but overview of
-        Mozilla technologies that could be used for Math UI.
+      <footer class="notes">Overview of Mozilla technologies
+        that could be used for Math UI.
         Presentation focused on Firefox OS.
       </footer>
     </section>
@@ -60,16 +63,28 @@
       <header>
         <h2>Mozilla MathML Project</h2>
       </header>
-      <img src="pictures/m18-cd.png" 
-           class="middle" 
-           height="60%" 
-           alt="Mozilla Milestone 18 with MathML support">
+      <ul>
+        <li>Raniere Silva &amp; Frédéric Wang</li>
+        <li>~10 volunteers</li>
+        <li>15 years anniversary</li>
+        <li>Math formulae and more</li>
+      </ul>
+      <div style="float: right; height: 100%; position: relative;
+                  top: -40%; left: 10%;">
+        <img src="pictures/m18-cd.png" 
+             height="80%"
+             title="Mozilla m18 with MathML &amp; SVG, mozilla.org"
+             alt="Mozilla m18 with MathML &amp; SVG, mozilla.org"/><br/>
+      </div>
       <small class="credits">
         <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/Updates/The_First_International_MathML_Conference_%28October_2000%29">
           Mozilla CD at the 1st MathML Conference (October 2000)</a>
       </small>
-      <footer class="notes">Volunteer team: Raniere, Fred and others.<br/>
-        Work done: Gecko and Web developments for science.</footer>
+      <footer class="notes">
+        We are part of a volunteer team
+        working on Gecko and Web developments for science.
+        <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/Updates/Project_Initiation_%28May_1999%29">Project initiation in May 1999</a>.
+      </footer>
     </section>
   </div></div>
 
@@ -78,12 +93,19 @@
       <header>
         <h2>Firefox OS</h2>
       </header>
-      <img src="pictures/mozillaoverview/redpanda.jpg" 
-           class="middle"
-           alt="Red Panda">
-      <footer class="notes">Based on Free Software and Open Web technologies.
-        <br/>
-        Gecko as the Web rendering engine and so MathML support.
+      <ul>
+        <li>Mobile devices</li>
+        <li>Open</li>
+        <li>Web technologies</li>
+      </ul>
+      <div style="float: right; position: relative; top: -30%;">
+        <img src="pictures/redpanda.jpg" 
+             alt="Red Panda"/>
+      </div>
+      <footer class="notes">Smartphones, tablets and more.<br/>
+        Based on Free Software and Web standards.<br/>
+        Technologies familiar to Web developers<br/>
+        Gecko as the rendering engine and so MathML support.
       </footer>
       <small class="credits">
         <a href="http://www.flickr.com/photos/yortw/5798336827/">Photo by Yortw</a>
@@ -123,9 +145,8 @@
         <h2>OpenType MATH table</h2>
       </header>
       <ul style="nobull">
-        <li>Microsoft Word, XeTeX/LuaTeX/ConTeXt, Gecko 31, WebKit Nightly</li>
+        <li>Microsoft Word, Modern TeX Engines, Gecko, WebKit</li>
         <li>Cambria Math, Latin Modern Math, STIX Math, WOFF</li>
-        <li>Mathvariant subtable</li>
       </ul>
       <p style="margin: auto; width: 800px;">
         <iframe
@@ -150,15 +171,18 @@
         <li>Yet another LaTeX-to-MathML converter</li>
         <li>Internationalization</li>
         <li>Minimality</li>
-        <li>Many interfaces: Web page, CommonJS, command-line</li>
+        <li>Multiple Interfaces</li>
         <li>Integration in Mozilla Products</li>
       </ul>
+      <pre style="color: blue; font-size: 90%; font-family: monospace;">س = \frac{-ب \pm \sqrt{ب^٢ - ٤اج}}{٢ا}</pre>
+      <p><math display="block" dir="rtl" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>س</mi><mo>=</mo><mfrac><mrow><mo>-</mo><mi>ب</mi><mo>±</mo><msqrt><mrow><msup><mi>ب</mi><mn>٢</mn></msup><mo>-</mo><mn>٤</mn><mi>ا</mi><mi>ج</mi></mrow></msqrt></mrow><mrow><mn>٢</mn><mi>ا</mi></mrow></mfrac></mrow><annotation encoding="TeX">س = \frac{-ب\pm\sqrt{ب^٢-٤اج}}{٢ا}</annotation></semantics></math></p>
       <footer class="notes">
         Javascript, itex2MML grammar, unicode.xml file from W3C<br/>
         i18n: Unicode and RTL support<br/>
         Minimality: Standalone, Synchronous, LaTeX-to-MathML only, core
         LaTeX commands<br/>
-        Command line: Web Server and stream filter<br/>
+        Interfaces: Web page, CommonJS, command-line
+        (Web Server and stream filter).<br/>
         Integration: Add-ons, Web apps, MDN Wiki, Seamonkey/Thunderbird
       </footer>
     </section>
@@ -175,7 +199,7 @@
       </p>
       <footer class="notes">Canvas useful for dynamic 2D/3D schemas,
         MathML can be included in SVG images which in turn can be used in
-        canvas, TeXZilla such SVG images from LaTeX.
+        canvas, TeXZilla generates such SVG images from LaTeX.
       </footer>
     </section>
   </div></div>  
@@ -205,6 +229,93 @@
       </footer>
     </section>
   </div></div>  
+
+  <div id="FirefoxOS-Apps" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox OS Apps</h2>
+      </header>
+      <table style="width:100%">
+        <tr><th style="width:50%;">Packaged</th><th style="width:50%;">Hosted</th></tr>
+        <tr><td>
+            <ul>
+              <li>App.zip</li>
+              <ul>
+                <li>index.html</li>
+                <li>manifest.webapp</li>
+                <li>css</li>
+                <li>js</li>
+                <li>img</li>
+              </ul>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>http://app.com</li>
+              <ul>
+                <li>index.html</li>
+                <li>manifest.webapp</li>
+                <li>css</li>
+                <li>js</li>
+                <li>img</li>
+              </ul>
+            </ul>
+          </td></tr>
+      </table>
+      <footer class="notes">Example of manifest.</footer>
+    </section>
+  </div></div>
+
+  <div id="FirefoxOS-Manifest" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox OS Manifest</h2>
+      </header>
+      <pre>
+        <code style="font-size: 65%">
+{
+  "version": "1.0.0",
+  "name": "App",
+  "description": "App short description",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Your name or organization",
+    "url": "http://your-homepage-here.org"
+  },
+  "default_locale": "en"
+}
+        </code>
+      </pre>
+      <div id="cover-foxy">
+        <div id="foxy"></div>
+        <img id="firefox-os-wordmark" src="pictures/firefox-os-wordmark.png"></img>
+      </div>
+      <footer class="notes">Example of manifest.</footer>
+    </section>
+  </div></div>
+
+  <div id="FirefoxOS-Screenshot" class="slide"><div>
+    <section>
+      <header>
+        <h2>Example of Firefox OS</h2>
+      </header>
+      <p>TODO: Add screenshots</p>
+      <footer class="notes">Example of manifest.</footer>
+    </section>
+  </div></div>
+
+  <div id="FirefoxOS-MathSuite" class="slide"><div>
+    <section>
+      <header>
+        <h2>Math Suite</h2>
+      </header>
+      <p>TODO: Add figure</p>
+      <footer class="notes">Example of manifest.</footer>
+    </section>
+  </div></div>
 <!--   <div id="oneline" class="slide oneline"><div> -->
 <!--     <section> -->
 <!--       <header> -->
