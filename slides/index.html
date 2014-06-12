@@ -20,6 +20,9 @@
  -->
   <meta name="viewport" content="width=device-width, user-scalable=yes">
   <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+
+  <!-- Foxy -->
+  <link rel="stylesheet" href="css/foxy.css">
 </head>
 <body class="list">
   <header class="caption">
@@ -78,15 +81,15 @@
       <header>
         <h2>Firefox OS</h2>
       </header>
-      <img src="pictures/mozillaoverview/redpanda.jpg" 
-           class="middle"
-           alt="Red Panda">
+      <div id="cover-foxy">
+        <div id="foxy"></div>
+        <img id="firefox-os-wordmark" src="pictures/firefox-os-wordmark.png"></img>
+      </div>
       <footer class="notes">Based on Free Software and Open Web technologies.
-        <br/>
-        Gecko as the Web rendering engine and so MathML support.
+        <br/>Gecko as the Web rendering engine and so MathML support.
       </footer>
       <small class="credits">
-        <a href="http://www.flickr.com/photos/yortw/5798336827/">Photo by Yortw</a>
+        Animation from Mozilla.
       </small>
     </section>
   </div></div>
@@ -205,6 +208,89 @@
       </footer>
     </section>
   </div></div>  
+
+  <div id="FirefoxOS-Apps" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox OS Apps</h2>
+      </header>
+      <table style="width:100%">
+        <tr><th style="width:50%;">Packaged</th><th style="width:50%;">Hosted</th></tr>
+        <tr><td>
+            <ul>
+              <li>App.zip</li>
+              <ul>
+                <li>index.html</li>
+                <li>manifest.webapp</li>
+                <li>css</li>
+                <li>js</li>
+                <li>img</li>
+              </ul>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>http://app.com</li>
+              <ul>
+                <li>index.html</li>
+                <li>manifest.webapp</li>
+                <li>css</li>
+                <li>js</li>
+                <li>img</li>
+              </ul>
+            </ul>
+          </td></tr>
+      </table>
+      <footer class="notes">Example of manifest.</footer>
+    </section>
+  </div></div>
+
+  <div id="FirefoxOS-Manifest" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox OS Manifest</h2>
+      </header>
+      <pre>
+        <code style="font-size: 65%">
+{
+  "version": "1.0.0",
+  "name": "App",
+  "description": "App short description",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Your name or organization",
+    "url": "http://your-homepage-here.org"
+  },
+  "default_locale": "en"
+}
+        </code>
+      </pre>
+      <footer class="notes">Example of manifest.</footer>
+    </section>
+  </div></div>
+
+  <div id="FirefoxOS-Screenshot" class="slide"><div>
+    <section>
+      <header>
+        <h2>Example of Firefox OS</h2>
+      </header>
+      <p>TODO: Add screenshots</p>
+      <footer class="notes">Example of manifest.</footer>
+    </section>
+  </div></div>
+
+  <div id="FirefoxOS-MathSuite" class="slide"><div>
+    <section>
+      <header>
+        <h2>Math Suite</h2>
+      </header>
+      <p>TODO: Add figure</p>
+      <footer class="notes">Example of manifest.</footer>
+    </section>
+  </div></div>
 <!--   <div id="oneline" class="slide oneline"><div> -->
 <!--     <section> -->
 <!--       <header> -->

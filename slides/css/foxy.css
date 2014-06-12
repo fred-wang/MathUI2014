@@ -1,0 +1,22 @@
+#cover-foxy {
+    background: #0097de;
+    width: 156px;
+    margin: 0 40%;
+}
+#foxy {
+    animation: animate-tail 3.75s steps(44) infinite;
+    background: url('../pictures/foxtail.png') 0 0 no-repeat;
+    width: 156px;
+    height: 156px;
+}
+#firefox-os-wordmark {
+    width: 156px;
+}
+@keyframes animate-tail {
+    0% {
+        background-position: -6864px 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
