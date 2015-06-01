@@ -83,10 +83,8 @@
 
       /* LatinModern */
       @font-face {
-        font-family: 'Latin Modern';
-        src: local('Latin-Modern-Regular'),
-             local('Latin Modern Regular'),
-             url('webfonts/lmroman12-regular.woff');
+        font-family: 'LMRoman12';
+        src: url('webfonts/lmroman12-regular.woff');
       }
       @font-face {
         font-family: 'Latin Modern Math';
@@ -95,7 +93,7 @@
              url('webfonts/latinmodern-math.woff');
       }
       body.LatinModern, body.LatinModern mtext, body.LatinModern select {
-        font-family: 'Latin Modern';
+        font-family: 'Latin Modern Roman', 'LMRoman12';
       }
       body.LatinModern math {
         font-family: 'Latin Modern Math';
